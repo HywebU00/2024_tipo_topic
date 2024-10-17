@@ -1,0 +1,94 @@
+footer {
+  box-sizing: border-box;
+  @include clearfix;
+  text-align: left;
+  font-size: 1rem;
+  color: #fff;
+  .container {
+    @include gutter(120px);
+    background: $fatfooterBgColor;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    @include screen("tablet") {
+      flex-wrap: wrap;
+    }
+    @include screen("mobile") {
+      @include gutter(60px);
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: $footerColor;
+    }
+  }
+  .footer_info {
+    flex: 1 1 auto;
+    @include screen("tablet") {
+      margin-bottom: 20px;
+    }
+    .footer_link {
+      @include li-reset();
+      @include clearfix();
+      display: flex;
+      @include screen("tablet") {
+        flex-wrap: wrap;
+      }
+      li {
+        flex: 0 1 auto;
+        margin: 0px 1rem 5px 0px;
+        a {
+          display: block;
+          text-align: center;
+          &:hover,
+          &:focus {
+          }
+        }
+      }
+    }
+    p {
+      line-height: 1.8;
+      margin-top: 0;
+    }
+  }
+  .update,
+  .counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+      font-style: normal;
+      padding: 0 0.5em;
+    }
+  }
+  .footer_icon {
+    flex: 0 1 260px;
+    @include screen("tablet") {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0 4px;
+      &:focus {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 120px;
+    }
+  }
+}
