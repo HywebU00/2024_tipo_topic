@@ -16,6 +16,7 @@
   z-index: 99;
   clear: both;
   isolation: isolate;
+  display: none;
   &.sticky {
     position: fixed;
     top: 0;
@@ -40,56 +41,27 @@
       margin: 0 auto;
     }
   }
-  @include screen("mobile") {
-    display: none;
-  }
   // 預設選單 ul
-  > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-
-    // 第一層選單樣式
-    > li {
-      flex: 0 1 16%;
-
-      > a {
-        display: block;
-        padding: 0 1em;
-        min-height: 2.5em;
-        font-weight: bold;
-        line-height: 2.5em;
-        white-space: nowrap;
-        color: $color-word;
-      }
-      // &.hasChild {
-      //   > a {
-      //     &:after {
-      //       content: '';
-      //       width: 4px;
-      //       height: 4px;
-      //       display: inline-block;
-      //       margin-left: 0.5em;
-      //       vertical-align: middle;
-      //       border: 2px solid lighten($color-word, 40);
-      //       transform: rotate(135deg);
-      //       border-bottom: none;
-      //       border-left: none;
-      //       margin-bottom: 0.2em;
-      //     }
-      //   }
-      // }
-
-      &:hover {
+  .container {
+    > ul {
+      @include li-reset;
+      display: flex;
+      flex-wrap: wrap;
+      // 第一層選單樣式
+      > li {
+        flex: 0 1 16%;
         > a {
-          color: $aHover;
-
-          &:after {
-            border: 2px solid $aHover;
-            border-bottom: none;
-            border-left: none;
+          display: block;
+          padding: 0 1em;
+          min-height: 2.5em;
+          font-weight: bold;
+          line-height: 2.5em;
+          white-space: nowrap;
+          color: $color-word;
+        }
+        &:hover {
+          > a {
+            color: $aHover;
           }
         }
       }
@@ -99,7 +71,6 @@
   ul {
     li {
       position: relative;
-
       a {
         display: block;
         text-decoration: none;

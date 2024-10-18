@@ -5,7 +5,6 @@
     outline: 2px solid $aFocus;
   }
 }
-
 .menuClose {
   padding: 0;
   color: transparent;
@@ -40,62 +39,7 @@
   }
 }
 .header {
-  .container {
-    .tabletUse {
-      @media screen and (min-width: 992px) {
-        display: none !important;
-      }
-    }
-    @include screen("mobile") {
-      height: 60px;
-      background: #fff;
-    }
-    .searchCtrl,
-    .sidebarCtrl {
-      position: relative;
-      display: block;
-      @include screen("tablet") {
-        position: absolute;
-      }
-      @include screen("tablet") {
-        &:not(.tabletUse) {
-          display: none !important;
-        }
-      }
-      &:focus-visible {
-        outline: 2px solid $aFocus;
-      }
-    }
-    .sidebarCtrl {
-      @media screen and (min-width: 992px) {
-        margin-left: 10px;
-      }
-      span {
-        background: #000 !important;
-        height: 2px;
-      }
-    }
-    .searchCtrl {
-      &:not(.tabletUse) {
-        margin-right: 10px;
-        @include screen("tablet") {
-          margin-right: 0;
-        }
-        + span {
-          display: inline-block;
-          width: 2px;
-          height: 30px;
-          background: #333;
-          @include screen("tablet") {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
   .menu {
-    display: none;
     @media screen and (min-width: 992px) {
       background: rgba(0, 0, 0, 0.85);
       padding: 4em 2em;
@@ -106,59 +50,55 @@
       top: 0;
       bottom: 0;
       width: 100%;
-      & > ul {
-        display: flex;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        --gap: 20px;
-        gap: var(--gap);
-
-        a {
-          padding: 5px 0;
-
-          &::after {
-            border-color: #fff !important;
-          }
-        }
-
-        & > li {
-          flex: none;
-          width: calc((100% - (var(--gap) * 4)) / 5);
-          box-sizing: border-box;
-          & > a {
-            color: $menuColor;
-            font-size: 1.25rem;
-          }
-          &:hover > a {
-            color: $menuHover;
-          }
-        }
-        ul {
-          display: block !important;
-          opacity: 1 !important;
-          left: auto !important;
-          right: auto !important;
-          top: auto !important;
-          position: relative !important;
-          background: none;
+      .container {
+        & > ul {
+          display: flex;
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          --gap: 20px;
+          gap: var(--gap);
           a {
+            padding: 5px 0;
             &::after {
-              display: none;
+              border-color: #fff !important;
             }
           }
-
-          ul {
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.1);
-
-            a {
-              padding-left: 10px;
+          & > li {
+            flex: none;
+            width: calc((100% - (var(--gap) * 4)) / 5);
+            box-sizing: border-box;
+            & > a {
+              color: $menuColor;
+              font-size: 1.25rem;
             }
-
+            &:hover > a {
+              color: $menuHover;
+            }
+          }
+          ul {
+            display: block !important;
+            opacity: 1 !important;
+            left: auto !important;
+            right: auto !important;
+            top: auto !important;
+            position: relative !important;
+            background: none;
+            a {
+              &::after {
+                display: none;
+              }
+            }
             ul {
+              padding: 10px 0;
+              background: rgba(255, 255, 255, 0.1);
               a {
-                padding-left: 20px;
+                padding-left: 10px;
+              }
+              ul {
+                a {
+                  padding-left: 20px;
+                }
               }
             }
           }
@@ -211,6 +151,9 @@ h2.sectionTitle {
 .kvSlider {
   padding: 0 5.2% 30px;
   @include screen("tablet") {
+    padding: 0 40px 30px;
+  }
+  @include screen("mobile") {
     padding: 0 30px 30px;
   }
   @include screen("xs_mobile") {
@@ -248,7 +191,7 @@ h2.sectionTitle {
           position: absolute;
           z-index: 1;
           text-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.3);
-          @include screen("mobile") {
+          @include screen("tablet") {
             top: 40px;
           }
           .sliderTitle {
@@ -285,6 +228,9 @@ h2.sectionTitle {
         padding: 10px;
         box-sizing: border-box;
         background: $mpSliderPage;
+        @include screen("tablet") {
+          display: none;
+        }
         &::after {
           content: "";
           width: 2px;
@@ -547,6 +493,7 @@ h2.sectionTitle {
         font-size: 1.5rem;
         font-weight: bold;
         letter-spacing: 2px;
+        width: 50%;
         @include screen("tablet") {
           font-size: 1.25rem;
         }
@@ -560,13 +507,13 @@ h2.sectionTitle {
           background: $tabBtnActive;
           &:hover,
           &:focus-visible {
-            background: $timeColor;
+            background: $tabBtnHover;
             color: #fff;
           }
         }
         &:hover,
         &:focus-visible {
-          color: $timeColor;
+          color: $tabBtnHover;
         }
       }
     }
@@ -1171,6 +1118,8 @@ h2.sectionTitle {
 .resource {
   padding: 60px 7.6%;
   background: $resourceBg;
+  background-repeat: repeat;
+  background-position: center bottom;
   background-size: cover;
   @include screen("mobile") {
     padding: 30px;

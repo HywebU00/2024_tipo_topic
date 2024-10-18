@@ -34,59 +34,6 @@ if ($slider.length) {
 }
 
 
-  // var $slider = $('.mpSlider .slider');
-
-  // if ($slider.length) {
-  //   var currentSlide;
-  //   var slidesCount;
-  //   var sliderCounter = document.createElement('div');
-  //   sliderCounter.classList.add('sliderCounter');
-
-  //   var updateSliderCounter = function(slick, currentIndex) {
-  //     currentSlide = slick.slickCurrentSlide() + 1;
-  //     slidesCount = slick.slideCount;
-  //     $(sliderCounter).text(currentSlide + '/' +slidesCount)
-  //   };
-
-  //   $slider.on('init', function(event, slick) {
-  //     $slider.append(sliderCounter);
-  //     updateSliderCounter(slick);
-  //   });
-
-  //   $slider.on('afterChange', function(event, slick, currentSlide) {
-  //     updateSliderCounter(slick, currentSlide);
-  //   });
-
-  //   $slider.slick();
-  // }
-  // $('.mpSlider .slider').on('init reInit afterChange', function(event, slick, currentSlide) {
-  //   var i = (currentSlide ? currentSlide : 0) + 1;
-  //   if (slick.slideCount<10) {
-  //     if (i<10) {
-  //       $('.sliderCounter').html( '<span>0' + i + '</span> / 0' + slick.slideCount);
-  //     } else {
-  //       $('.sliderCounter').html( '<span>' + i + '</span> / 0' + slick.slideCount);
-  //     }
-  //   } else {
-  //     if (i<10) {
-  //       $('.sliderCounter').html( '<span>0' + i + '</span> / ' + slick.slideCount);
-  //     } else {
-  //       $('.sliderCounter').html( '<span>' + i + '</span> / ' + slick.slideCount);
-  //     }
-  //   }
-  // });
-  // $('.mpSlider .slider').slick({
-  //   mobileFirst: true,
-  //   dots: false,
-  //   arrow: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   autoplay: false,
-  //   fade: true,
-  //   lazyLoaded: true,
-  //   lazyLoad: 'ondemand',
-  //   ease: 'ease'
-  // });
 
   // 連結輪播
   $('.bottomSlider').slick({

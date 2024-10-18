@@ -45,16 +45,38 @@
     background: #fff;
     @include screen("tablet") {
       height: 60px;
+      padding: 0 60px;
+    }
+    .tabletUse {
+      @media screen and (min-width: 992px) {
+        display: none !important;
+      }
+    }
+    .searchCtrl,
+    .sidebarCtrl {
+      position: relative;
+      display: block;
+      @include screen("tablet") {
+        position: absolute;
+      }
+      @include screen("tablet") {
+        &:not(.tabletUse) {
+          display: none !important;
+        }
+      }
+      &:focus-visible {
+        outline: 2px solid $aFocus;
+      }
     }
     .sidebarCtrl {
-      display: none;
+      //   display: none;
       left: 0px;
       @extend %mobileCtrlBtn;
       span {
         position: absolute;
-        background: $primaryColor;
+        background: $fontColor;
         width: 50%;
-        height: 3px;
+        height: 2px;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
@@ -67,10 +89,13 @@
           top: 36px;
         }
       }
+      @media screen and (min-width: 992px) {
+        margin-left: 10px;
+      }
     }
     // search
     .searchCtrl {
-      display: none;
+      //   display: none;
       right: 0px;
       font-size: 0em;
       @extend %mobileCtrlBtn;
@@ -87,22 +112,38 @@
         left: 10px;
         display: block;
       }
+      &:not(.tabletUse) {
+        margin-right: 10px;
+        @include screen("tablet") {
+          margin-right: 0;
+        }
+        + span {
+          display: inline-block;
+          width: 2px;
+          height: 30px;
+          background: #333;
+          @include screen("tablet") {
+            display: none;
+          }
+        }
+      }
     }
   }
   h1 {
     float: left;
     width: 300px;
-    height: 75px;
+    height: 70px;
     margin: 0 auto 0 0;
     padding: 0;
     box-sizing: border-box;
     a {
-      display: inline-block;
-    }
-    img {
       display: block;
-      max-width: 300px;
-      max-height: 75px;
+      width: 250px;
+      height: 69px;
+      background-image: $logo;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      font-size: 0;
     }
     @include screen("tablet") {
       margin: 0 auto;
@@ -148,7 +189,7 @@
           text-decoration: none;
           color: $fontColor;
           &:hover {
-            color: $menuColor;
+            color: $menuHover;
           }
         }
       }
@@ -164,6 +205,7 @@
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
     .container {
       height: 80px;
+      border-top: 0;
       @include screen("tablet") {
         height: 60px;
       }
@@ -188,7 +230,7 @@
   font-size: 1rem;
   box-sizing: border-box;
   display: none;
-  @include screen("mobile") {
+  @include screen("tablet") {
     width: 100% !important;
     max-width: 100% !important;
     min-width: auto;
@@ -196,12 +238,14 @@
     display: block;
     height: auto;
     position: fixed;
-    top: 60px;
+    top: 72px;
     left: 0;
     z-index: 1000;
     background: #333;
     display: none;
     margin: 0;
+    border-radius: 0;
+    right: 0;
   }
   label {
     font-size: 0em;
@@ -216,6 +260,9 @@
       padding: 0.25em 0.5em;
       box-shadow: none;
       width: auto;
+      &[type="text"] {
+        flex-grow: 1;
+      }
       &[type="submit"] {
         min-width: auto;
         padding: 0.2em 0.8em;
@@ -276,10 +323,10 @@
     bottom: 16px;
     min-width: auto;
     margin: 0;
-    @include screen("tablet") {
-      top: 5px;
-      right: 5px;
-    }
+    // @include screen("tablet") {
+    //   top: 5px;
+    //   right: 5px;
+    // }
     &::before,
     &::after {
       content: "";

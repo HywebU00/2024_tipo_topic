@@ -14,17 +14,17 @@ $color-orange: #d04500;
 $color-red: #d30000;
 $color-yellow: #fec003;
 $color-purple: #781f79;
-$color-gray: #ccc;
+$color-gray: #999;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
-$color-word: #222; //一般字的顏色
-$btn-word: #222; //按鈕字的顏色
+$color-word: #292929; //一般字的顏色
+$btn-word: #292929; //按鈕字的顏色
 // 連結顏色
 $aColor: #b01fe8;
-$aHover: #a362fe;
+$aHover: rgb(142, 61, 255);
 $aFocus: #ff0088;
 // 表單focus顏色
-$form-focus: #ff0088; //表單
+$form-focus: #b01fe8; //表單
 $form-btn: #0066cc; //表單
 //------------------------------------------------------字型--------//
 // 字型設定
@@ -47,40 +47,54 @@ $screen-xs-flex: 320px !default; //極小尺寸 - flex
 $rounded-angle: 10px; //整站導角
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99); //動態預設
 
-//mp var
-
-$menuColor: #b01fe8;
-$menuHover: #a362fe;
-
+//共用設定
+$logo: url(../images/mp/patents/logo.png);
 $fontColor: #292929;
+$menuColor: #b01fe8;
+$menuHover: #b01fe8; //menu滑過顏色
+$subMemuColor: #b01fe8;
+$subMemuHover: #6c1bb8;
 
-$sectionTitle: #6c1bb8;
+//mp區域
+$sectionTitle: #6c1bb8; //section標題
+$mpSliderPage: #6c1bb8; //mpSlider頁碼底色
 
-$mpSliderPage: #6c1bb8;
+$quickLink: #b01fe8; //快速連結
+$quickLinkHover: #6c1bb8; //快速連結hover
 
-$quickLink: #b01fe8;
-$quickLinkHover: #6c1bb8;
-
-$tabBtn: #d1d1d1;
+$tabBtn: #d1d1d1; //頁籤
 $tabBtnActive: linear-gradient(
   90deg,
   rgba(162, 32, 230, 1) 0%,
   rgba(193, 26, 235, 1) 100%
 );
+$tabBtnHover: #6c1bb8;
 
-$timeColor: #4c1795;
+$timeColor: #4c1795; //news時間顏色
 
-$columnMore: #6c1bb8;
+$columnMore: #6c1bb8; //兩欄more顏色
 
-$judgmentColor: #6c1bb8;
-$judgmentColor2: #b01fe8;
+$judgmentColor: #6c1bb8; //近期重要判決icon底色
+$judgmentColor2: #b01fe8; //近期重要判決文字hover
 
-$resourceBg: url(../images/mp/patents/source_bg.jpg) no-repeat center bottom;
-
+$resourceBg: url(../images/mp/patents/source_bg.jpg);
 $resourceMore: #6c1bb8;
 
 $fatfooterBgColor: #333; //fatFooter 底色
-$fatfooterNum: 6;
-$fatfooterColor: #a362fe;
+$fatfooterNum: 6; //fatFooter數量
+$fatfooterColor: #a362fe; //fatFooter箭頭hover顏色 第一層顏色
 
-$footerColor: #a362fe;
+$footerColor: #a362fe; //footer字hover
+//專利版本
+$th1: #5d0981;
+$th2: #79239e;
+$th3: #9443b7;
+$thb: #9c57ba;
+$tRB: #9c57ba;
+$ipcTr1: #79239e;
+$ipcTr2: #9c57ba;
+
+$innerBannerLine: #ff0088;
+$innerBanner: url(../images/mp/patents/innerBanner.png);
+$sourceBg: url(../images/mp/patents/source_bg.jpg);
+$innerSvg: url(../images/mp/patents/innerBg.svg);

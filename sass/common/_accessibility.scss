@@ -25,12 +25,12 @@ a.goCenter {
   position: absolute;
   top: -2.2em;
   left: 50%;
-  margin-left: -480px;
+  margin-left: -280px;
   padding: 0 0.5em;
   height: 2em;
   line-height: 2em;
   background: $secondaryColor;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   z-index: 999999999999;
   opacity: 0;
