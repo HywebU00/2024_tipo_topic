@@ -372,3 +372,33 @@ tabFunction({
   width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
   index: 0, // 預設開啟第幾個
 });
+
+$(document).ready(function() {
+  var wwSmall = 768; // 設定你的視窗寬度閾值
+
+  function toggleMenu() {
+      // 當視窗寬度小於 wwSmall 時，顯示/隱藏下拉選單
+      if ($(window).width() <= wwSmall) {
+          $('.subMenuList').slideToggle();
+          // 切換按鈕的 active class，當展開時添加，收起時移除
+          $('.subMenuToggle').toggleClass('active');
+      }
+  }
+  // 點擊按鈕切換顯示和 class
+  $('.subMenuToggle').click(function() {
+      toggleMenu();
+  });
+
+  // 當視窗大小改變時重設選單狀態和按鈕樣式
+  $(window).resize(function() {
+      if ($(window).width() > wwSmall) {
+          $('.subMenuList').css('display', 'block'); // 大於 wwSmall 時，顯示選單
+          $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+      } else {
+          $('.subMenuList').css('display', 'none'); // 小於 wwSmall 時，隱藏選單
+          $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+      }
+  });
+});
+
+

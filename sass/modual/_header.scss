@@ -142,7 +142,7 @@
       height: 69px;
       background-image: $logo;
       background-repeat: no-repeat;
-      background-position: 0 0;
+      background-position: center center;
       font-size: 0;
     }
     @include screen("tablet") {
@@ -151,12 +151,12 @@
       padding: 2px 60px;
       text-align: center;
       height: 60px;
-      img {
-        width: auto;
-        height: auto;
-        max-height: 54px;
+      a {
+        // width: auto;
+        height: 50px;
         margin: 0px auto;
-        transform: scale(0.8);
+        // transform: scale(0.8);
+        background-size: contain;
       }
     }
   }

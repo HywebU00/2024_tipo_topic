@@ -1882,14 +1882,14 @@ kbd kbd {
   background: #c7c7c7;
   border: 1px solid #adadad;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn:focus {
+.btn:focus-visible {
   background: #c7c7c7;
   border: 1px solid #adadad;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -1906,20 +1906,20 @@ kbd kbd {
 .btn-green {
   background: #298729;
   border: 1px solid #298729;
-  color: #FFF;
+  color: #fff;
 }
 .btn-green:hover {
   background: #1d601d;
   border: 1px solid #113911;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-green:focus {
+.btn-green:focus-visible {
   background: #1d601d;
   border: 1px solid #113911;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -1932,20 +1932,20 @@ kbd kbd {
 .btn-blue {
   background: #0066cc;
   border: 1px solid #0066cc;
-  color: #FFF;
+  color: #fff;
 }
 .btn-blue:hover {
   background: #004d99;
   border: 1px solid #003366;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-blue:focus {
+.btn-blue:focus-visible {
   background: #004d99;
   border: 1px solid #003366;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -1964,14 +1964,14 @@ kbd kbd {
   background: #e7ae01;
   border: 1px solid #b48801;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-yellow:focus {
+.btn-yellow:focus-visible {
   background: #e7ae01;
   border: 1px solid #b48801;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -1984,20 +1984,20 @@ kbd kbd {
 .btn-orange {
   background: #d04500;
   border: 1px solid #d04500;
-  color: #FFF;
+  color: #fff;
 }
 .btn-orange:hover {
   background: #9d3400;
   border: 1px solid #6a2300;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-orange:focus {
+.btn-orange:focus-visible {
   background: #9d3400;
   border: 1px solid #6a2300;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -2010,20 +2010,20 @@ kbd kbd {
 .btn-red {
   background: #d30000;
   border: 1px solid #d30000;
-  color: #FFF;
+  color: #fff;
 }
 .btn-red:hover {
   background: #a00000;
   border: 1px solid #6d0000;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-red:focus {
+.btn-red:focus-visible {
   background: #a00000;
   border: 1px solid #6d0000;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -2036,20 +2036,20 @@ kbd kbd {
 .btn-purple {
   background: #8c248d;
   border: 1px solid #8c248d;
-  color: #FFF;
+  color: #fff;
 }
 .btn-purple:hover {
   background: #641a65;
   border: 1px solid #3c0f3c;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-purple:focus {
+.btn-purple:focus-visible {
   background: #641a65;
   border: 1px solid #3c0f3c;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -2062,20 +2062,20 @@ kbd kbd {
 .btn-submit {
   background: #b836ea;
   border: 1px solid #b836ea;
-  color: #FFF;
+  color: #fff;
 }
 .btn-submit:hover {
   background: #a216d7;
   border: 1px solid #7f11a9;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-submit:focus {
+.btn-submit:focus-visible {
   background: #a216d7;
   border: 1px solid #7f11a9;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -2092,20 +2092,20 @@ kbd kbd {
 .btn-search {
   background: #b836ea;
   border: 1px solid #b836ea;
-  color: #FFF;
+  color: #fff;
 }
 .btn-search:hover {
   background: #a216d7;
   border: 1px solid #7f11a9;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.btn-search:focus {
+.btn-search:focus-visible {
   background: #a216d7;
   border: 1px solid #7f11a9;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -2139,7 +2139,7 @@ kbd kbd {
 
 .btn-normal {
   background: #f1f1f1 !important;
-  color: #65656E !important;
+  color: #65656e !important;
   border: solid 1px #c3c3c3 !important;
   text-shadow: none !important;
 }
@@ -2159,13 +2159,15 @@ kbd kbd {
   border: 1px solid #ddd !important;
 }
 
-.disabled, [disabled] {
+.disabled,
+[disabled] {
   opacity: 0.5;
   cursor: not-allowed !important;
   text-shadow: none;
 }
 
-.readonly, [readonly] {
+.readonly,
+[readonly] {
   cursor: not-allowed !important;
   text-shadow: none;
 }
@@ -2190,6 +2192,12 @@ kbd kbd {
   padding: 0.1em 0em 0.1em;
   font-size: 0.875rem;
   margin: 0px auto 2rem;
+  clear: both;
+}
+@media screen and (max-width: 767px) {
+  .breadcrumb {
+    display: none;
+  }
 }
 .breadcrumb ul {
   margin: 0;
@@ -3446,7 +3454,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   height: 69px;
   background-image: url(../images/mp/patents/logo.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
   font-size: 0;
 }
 @media screen and (max-width: 991px) {
@@ -3457,13 +3465,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
     text-align: center;
     height: 60px;
   }
-  .header h1 img {
-    width: auto;
-    height: auto;
-    max-height: 54px;
+  .header h1 a {
+    height: 50px;
     margin: 0px auto;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    background-size: contain;
   }
 }
 .header .navigation {
@@ -7099,14 +7104,14 @@ input[type=submit]:hover {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-input[type=submit]:focus {
+input[type=submit]:focus-visible {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -7138,15 +7143,15 @@ textarea {
   }
 }
 
-button:focus,
-input[type=text]:focus,
-input[type=reset]:focus,
-input[type=file]:focus,
-input[type=tel]:focus,
-input[type=email]:focus,
-input[type=password]:focus,
-textarea:focus,
-select:focus {
+button:focus-visible,
+input[type=text]:focus-visible,
+input[type=reset]:focus-visible,
+input[type=file]:focus-visible,
+input[type=tel]:focus-visible,
+input[type=email]:focus-visible,
+input[type=password]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
   border: 1px solid #d17cf1;
   -webkit-box-shadow: 0px 0px 0px 2px #d17cf1;
           box-shadow: 0px 0px 0px 2px #d17cf1;
@@ -7179,14 +7184,14 @@ input[type=reset]:hover {
   background: #4d4d4d;
   border: 1px solid #333333;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-input[type=reset]:focus {
+input[type=reset]:focus-visible {
   background: #4d4d4d;
   border: 1px solid #333333;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -7271,14 +7276,14 @@ input[type=checkbox]:focus {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.upload_grp .upload_btn:focus {
+.upload_grp .upload_btn:focus-visible {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
@@ -9572,7 +9577,7 @@ body.noscroll {
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding-top: 72px;
+    padding-top: 60px;
     background: #fff;
     overflow: hidden;
     overflow-y: auto;
@@ -9768,31 +9773,105 @@ body.noscroll {
   max-width: 100%;
   padding-bottom: 2rem;
 }
-.innerpage .center_block .subMemu {
+.innerpage .center_block .subMenu {
   overflow: hidden;
-  font-size: 1.25em;
-  font-weight: bold;
   margin-bottom: 30px;
   padding-top: 2px;
   padding-left: 2px;
 }
-.innerpage .center_block .subMemu ul {
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu {
+    overflow: visible;
+  }
+}
+.innerpage .center_block .subMenu .subMenuToggle {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu .subMenuToggle {
+    display: block;
+    font-size: 1.125em;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    border: 1px solid rgb(224, 224, 224);
+  }
+  .innerpage .center_block .subMenu .subMenuToggle:focus {
+    border: 1px solid rgb(237, 237, 237);
+  }
+  .innerpage .center_block .subMenu .subMenuToggle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-top: 2px solid #292929;
+    border-right: 2px solid #292929;
+    -webkit-transform: rotate(135deg) translateY(-50%);
+            transform: rotate(135deg) translateY(-50%);
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    margin-top: -12px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .innerpage .center_block .subMenu .subMenuToggle.active {
+    background: #6c1bb8;
+    color: #fff;
+  }
+  .innerpage .center_block .subMenu .subMenuToggle.active::after {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: -5px;
+  }
+}
+.innerpage .center_block .subMenu ul.subMenuList {
+  font-size: 1.25em;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.innerpage .center_block .subMemu ul li {
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu ul.subMenuList {
+    display: none;
+    font-size: 1rem;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(230, 230, 230)), to(rgb(255, 255, 255)));
+    background: linear-gradient(0deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
+    padding: 0 1rem;
+  }
+}
+.innerpage .center_block .subMenu ul.subMenuList li {
   float: left;
   margin-right: 40px;
   margin-bottom: 12px;
   position: relative;
 }
-.innerpage .center_block .subMemu ul li a {
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu ul.subMenuList li {
+    float: none;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+  }
+}
+.innerpage .center_block .subMenu ul.subMenuList li a {
   display: block;
   padding: 16px 4px;
   color: #292929;
 }
-.innerpage .center_block .subMemu ul li a::after {
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu ul.subMenuList li a {
+    padding: 12px;
+    text-align: center;
+  }
+}
+.innerpage .center_block .subMenu ul.subMenuList li a::after {
   content: "";
   width: 0%;
   height: 4px;
@@ -9804,7 +9883,25 @@ body.noscroll {
   transition: all 0.5s;
   border-radius: 4px;
 }
-.innerpage .center_block .subMemu ul li a:hover::after {
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu ul.subMenuList li a::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .subMenu ul.subMenuList li a:hover {
+    color: #6c1bb8;
+  }
+}
+.innerpage .center_block .subMenu ul.subMenuList li a:hover::after {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #b01fe8;
+}
+.innerpage .center_block .subMenu ul.subMenuList li a.active::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -9813,16 +9910,7 @@ body.noscroll {
   bottom: 0;
   background: #b01fe8;
 }
-.innerpage .center_block .subMemu ul li a.active::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: #b01fe8;
-}
-.innerpage .center_block .subMemu ul li a.active:hover {
+.innerpage .center_block .subMenu ul.subMenuList li a.active:hover {
   color: #6c1bb8;
 }
 .innerpage .center_block .pagetitle {
@@ -12495,6 +12583,15 @@ h2.title {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .patents .patentsFunction {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .patents .patentsFunction .total {
   margin-top: 0.5em;
 }
@@ -12535,14 +12632,14 @@ h2.title {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
 }
-.patents .patentsFunction .mode a.active:focus {
+.patents .patentsFunction .mode a.active:focus-visible {
   background: #9014c0;
   border: 1px solid #6e0f92;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   outline: none;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088 !important;
           box-shadow: 0 0px 0px 2px #ff0088 !important;
