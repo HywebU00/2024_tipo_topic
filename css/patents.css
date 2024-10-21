@@ -3542,6 +3542,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .header.sticky .container h1 img {
   height: 65px;
 }
+.header.sticky .container .search {
+  top: 80px;
+}
 
 .search {
   position: absolute;
