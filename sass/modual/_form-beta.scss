@@ -1182,6 +1182,10 @@ select::-ms-expand {
         display: inline-block;
         margin-right: 0.5em;
       }
+      > label {
+        display: inline-block;
+        margin-right: 0;
+      }
       > input,
       > textarea,
       > select,

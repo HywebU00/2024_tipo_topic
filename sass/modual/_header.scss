@@ -144,19 +144,17 @@
       background-repeat: no-repeat;
       background-position: center center;
       font-size: 0;
+      background-size: contain;
     }
     @include screen("tablet") {
       margin: 0 auto;
       width: 100%;
-      padding: 2px 0;
+      padding: 5px 0;
       text-align: center;
       height: 60px;
       a {
-        // width: auto;
         height: 50px;
         margin: 0px auto;
-        // transform: scale(0.8);
-        background-size: contain;
       }
     }
   }
@@ -210,9 +208,17 @@
         height: 60px;
       }
       h1 {
-        padding: 5px 0;
-        img {
-          height: 65px;
+        height: 60px;
+        @include screen("tablet") {
+          padding: 5px 0;
+        }
+        a {
+          height: 60px;
+          background-size: contain;
+          @include screen("tablet") {
+            height: 50px;
+            margin: 0px auto;
+          }
         }
       }
       .search {

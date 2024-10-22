@@ -12,7 +12,6 @@
         <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!-- hyUI css -->
     <link rel="stylesheet" href="css/patents.css" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
@@ -308,7 +307,9 @@
                         <form action="">
                           <div class="form_grid flex-form">
                             <div class="form_grp">
-                              <div class="form_title">請選擇版本：</div>
+                              <label for="" class="form_title"
+                                >請選擇版本：</label
+                              >
                               <div class="form_content">
                                 <select name="" id="">
                                   <option value="">test</option>
@@ -318,14 +319,16 @@
                               </div>
                             </div>
                             <div class="form_grp form_inline">
-                              <div class="form_title">分類號：</div>
+                              <label for="" class="form_title">分類號：</label>
                               <div class="form_content">
                                 <input name="username" type="text" />
                                 <select name="" id="">
                                   <option value="">and</option>
                                   <option value="">or</option>
                                 </select>
-                                <label class="form_title">關鍵字：</label>
+                                <label for="" class="form_title"
+                                  >關鍵字：</label
+                                >
                                 <input name="username" type="text" />
                               </div>
                             </div>
@@ -352,7 +355,9 @@
                         <form action="">
                           <div class="form_grid flex-form">
                             <div class="form_grp">
-                              <div class="form_title">請選擇版本：</div>
+                              <label for="" class="form_title"
+                                >請選擇版本：</label
+                              >
                               <div class="form_content">
                                 <select name="" id="">
                                   <option value="">test</option>
@@ -573,7 +578,7 @@
     <!-- 測試換顏色，正式上線請刪除此div及js -->
     <div
       class="ColorSet"
-      style="position: fixed; right: 0; top: 45%; z-index: 9"
+      style="position: fixed; right: 0; top: 45%; z-index: 999"
     >
       <a
         href="javascript:mm_changeStyle('css/patents.css');"

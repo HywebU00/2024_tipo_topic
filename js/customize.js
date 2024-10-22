@@ -373,36 +373,9 @@ tabFunction({
   index: 0, // 預設開啟第幾個
 });
 
-// $(document).ready(function() {
-//   var wwSmall = 768; // 設定你的視窗寬度閾值
-
-//   function toggleMenu() {
-//       // 當視窗寬度小於 wwSmall 時，顯示/隱藏下拉選單
-//       if ($(window).width() <= wwSmall) {
-//           $('.subMenuList').slideToggle();
-//           // 切換按鈕的 active class，當展開時添加，收起時移除
-//           $('.subMenuToggle').toggleClass('active');
-//       }
-//   }
-//   // 點擊按鈕切換顯示和 class
-//   $('.subMenuToggle').click(function() {
-//       toggleMenu();
-//   });
-
-//   // 當視窗大小改變時重設選單狀態和按鈕樣式
-//   $(window).resize(function() {
-//       if ($(window).width() > wwSmall) {
-//           $('.subMenuList').css('display', 'block'); // 大於 wwSmall 時，顯示選單
-//           $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
-//       } else {
-//           $('.subMenuList').css('display', 'none'); // 小於 wwSmall 時，隱藏選單
-//           $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
-//       }
-//   });
-// });
-
+//節點在手機版變下拉選單
 $(document).ready(function() {
-  var wwSmall = 600; // 設定你的視窗寬度閾值
+  var wwSmall = 768; // 設定你的視窗寬度閾值
 
   // 點擊當前按鈕時，觸發 toggleMenu
   $('.subMenuToggle').click(function() {
@@ -424,5 +397,220 @@ $(document).ready(function() {
   });
 });
 
+//advSearch 顯示條件查詢
+// $(document).ready(function() {
+//   const advSearchButton = $('.advSearch button');
+//   const advSearchContent = $('.advSearchContent');
+//   const focusableElements = advSearchContent.find('input, select, button'); // 找到所有可 focus 的表單元素
 
+//   $('.advSearch button').click(function() {
+//     $('.advSearchContent').slideToggle(); // 使用 slideToggle 展開/收合
+//     $(this).toggleClass('active'); // 切換 .active class
+//   });
+//   // 當按下 Enter 鍵時展開內容
+//   advSearchButton.on('keydown', function(e) {
+//       if (e.key === 'Enter') {
+//           e.preventDefault(); // 阻止默認的 Enter 行為
+//           advSearchContent.slideToggle(); // 展開或收合 .advSearchContent
+//           advSearchButton.toggleClass('active');
+
+//           // 當展開後，下一次按 Tab 移動焦點
+//           advSearchButton.on('keydown', function(e) {
+//               if (e.key === 'Tab' && advSearchContent.is(':visible')) {
+//                   e.preventDefault(); // 阻止默認的 Tab 行為
+//                   focusableElements.first().focus(); // 焦點移到第一個可 focus 元素
+//               }
+//           });
+//       }
+//   });
+
+//   // 監聽最後一個 focusable 元素上的 Tab 鍵按下事件
+//   focusableElements.last().on('keydown', function(e) {
+//       if (e.key === 'Tab' && !e.shiftKey) {
+//           e.preventDefault(); // 阻止默認的 Tab 行為
+//           advSearchContent.slideUp(); // 收合內容
+//           advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
+//       }
+//   });
+
+//   // 監聽第一個 focusable 元素上的 Shift+Tab 鍵按下事件
+//   focusableElements.first().on('keydown', function(e) {
+//       if (e.key === 'Tab' && e.shiftKey) {
+//           e.preventDefault(); // 阻止默認的 Shift+Tab 行為
+//           advSearchContent.slideUp(); // 收合內容
+//           advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
+//       }
+//   });
+// });
+$(document).ready(function() {
+  const advSearchButton = $('.advSearch button');
+  const advSearchContent = $('.advSearchContent');
+  const focusableElements = advSearchContent.find('input, select, button'); // 找到所有可 focus 的表單元素
+
+  // 展開或收合內容的函數
+  function toggleContent() {
+      advSearchContent.slideToggle(); // 展開或收合 .advSearchContent
+      advSearchButton.toggleClass('active');
+  }
+
+  // 當按下 Enter 鍵或鼠標點擊時展開內容
+  advSearchButton.on('click keydown', function(e) {
+      if (e.type === 'click' || e.key === 'Enter') {
+          e.preventDefault(); // 阻止默認的行為
+          toggleContent();
+
+          // 將焦點移到第一個可 focus 元素
+          if (advSearchContent.is(':visible')) {
+              focusableElements.first().focus();
+          }
+      }
+  });
+
+  // 監聽最後一個 focusable 元素上的 Tab 鍵按下事件
+  focusableElements.last().on('keydown', function(e) {
+      if (e.key === 'Tab' && !e.shiftKey) {
+          e.preventDefault(); // 阻止默認的 Tab 行為
+          advSearchContent.slideUp(); // 收合內容
+          advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
+      }
+  });
+
+  // 監聽第一個 focusable 元素上的 Shift+Tab 鍵按下事件
+  focusableElements.first().on('keydown', function(e) {
+      if (e.key === 'Tab' && e.shiftKey) {
+          e.preventDefault(); // 阻止默認的 Shift+Tab 行為
+          advSearchContent.slideUp(); // 收合內容
+          advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
+      }
+  });
+});
+
+
+//accordion
+
+
+$(document).ready(function () {
+  function accordionFunction(obj) {
+    'use strict';
+    const accordion = $(obj.target);
+    const autoClose = obj.autoClose;
+    const openSwitch = obj.openSwitch;
+    const openFirst = obj.openFirst;
+    const { open, close } = obj.info;
+
+    if (accordion.length) {
+      let nowIndex = obj.index === null ? null : obj.index < accordion.find('.accordionList').length ? obj.index : accordion.find('.accordionList').length;
+
+      // 初始化每個手風琴項
+      accordion.find('.accordionList').each(function (index) {
+        const $this = $(this);
+        const $button = $this.find('.accordionBtn');
+        const $content = $this.find('.accordionContent');
+
+        $button.attr({
+          'aria-expanded': 'false',
+          'role': 'button',
+        }).append(`<span class="accordionState">${open}</span><span class="accordionArrow"></span>`);
+
+        if (nowIndex === index) {
+          $this.addClass('active');
+          $button.attr('aria-expanded', 'true');
+          $content.slideDown();
+          $button.find('.accordionState').text(close);
+        } else {
+          $content.hide(); // 隱藏其他內容
+        }
+      });
+
+      // 預先展開模式
+      function openCheck() {
+        if (!openFirst && nowIndex === null) {
+          accordion.find('.accordionContent').slideUp();
+        }
+      }
+      openCheck();
+
+      accordion.find('.accordionList').each(function (index) {
+        const $this = $(this);
+        const $button = $this.find('.accordionBtn');
+        const $content = $this.find('.accordionContent');
+        const itemAllTarget = $content.find('a,button,input,textarea,select');
+        const firstItem = itemAllTarget.first();
+        const lastItem = itemAllTarget.last();
+        const siblings = $this.siblings('.accordionList');
+
+        // 點擊事件
+        if (openSwitch) {
+          $button.on('click', function (e) {
+            e.preventDefault();
+            if ($this.hasClass('active')) {
+              // 如果已展開，則收合
+              $this.removeClass('active');
+              $content.slideUp();
+              $button.attr('aria-expanded', 'false');
+              $button.find('.accordionState').text(open);
+            } else {
+              // 如果未展開，則展開
+              siblings.removeClass('active');
+              siblings.find('.accordionContent').slideUp();
+              siblings.find('.accordionBtn').attr('aria-expanded', 'false').find('.accordionState').text(open);
+
+              $this.addClass('active');
+              $content.slideDown();
+              $button.attr('aria-expanded', 'true');
+              $button.find('.accordionState').text(close);
+            }
+
+            nowIndex = index;
+
+            // 自動關閉
+            if (autoClose) {
+              siblings.each(function () {
+                $(this).find('.accordionContent').slideUp();
+                $(this).removeClass('active');
+                $(this).find('.accordionBtn').attr('aria-expanded', 'false').find('.accordionState').text(open);
+              });
+            }
+          });
+
+          // 鍵盤導航
+          $button.on('keydown', function (e) {
+            if (e.which === 9 && !e.shiftKey) {
+              if (!$this.hasClass('active')) {
+                $content.slideDown();
+              }
+              e.preventDefault();
+              firstItem.focus();
+            } else if (e.which === 9 && e.shiftKey) {
+              e.preventDefault();
+              lastItem.focus();
+            }
+          });
+        }
+
+        // 內容鍵盤導航
+        itemAllTarget.each(function () {
+          $(this).on('keydown', function (e) {
+            if (e.which === 9 && e.shiftKey && $(this).is(firstItem)) {
+              $button.focus();
+            }
+          });
+        });
+      });
+    }
+  }
+
+  // 手風琴功能
+  accordionFunction({
+    target: '.accordion',
+    openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
+    autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
+    openSwitch: true, // 是否可開合
+    index: 0, // 預設開啟第幾個
+    info: {
+      open: '展開', // 收合時顯示
+      close: '收合', // 展開時顯示
+    },
+  });
+});
 
