@@ -147,8 +147,8 @@
     }
     @include screen("tablet") {
       margin: 0 auto;
-      width: auto;
-      padding: 2px 60px;
+      width: 100%;
+      padding: 2px 0;
       text-align: center;
       height: 60px;
       a {
@@ -241,7 +241,7 @@
     display: block;
     height: auto;
     position: fixed;
-    top: 72px;
+    top: 60px;
     left: 0;
     z-index: 1000;
     background: #333;

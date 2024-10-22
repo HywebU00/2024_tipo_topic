@@ -51,11 +51,11 @@
       bottom: 0;
       width: 100%;
       .container {
+        //第一層
         & > ul {
-          display: flex;
-          max-width: 1200px;
-          width: 100%;
-          margin: 0 auto;
+          // max-width: 1200px;
+          // width: 100%;
+          // margin: 0 auto;
           --gap: 20px;
           gap: var(--gap);
           a {
@@ -76,6 +76,7 @@
               color: $menuHover;
             }
           }
+          //所有ul
           ul {
             display: block !important;
             opacity: 1 !important;
@@ -89,15 +90,39 @@
                 display: none;
               }
             }
+            //第三層
             ul {
               padding: 10px 0;
-              background: rgba(255, 255, 255, 0.1);
+              // background: rgba(255, 255, 255, 0.1);
+              li {
+              }
               a {
                 padding-left: 10px;
+                position: relative;
+                &::before {
+                  content: "";
+                  width: 4px;
+                  height: 4px;
+                  background: #fff;
+                  display: block;
+                  left: 0;
+                  top: 16px;
+                  position: absolute;
+                }
               }
               ul {
                 a {
                   padding-left: 20px;
+                  &::before {
+                    content: "";
+                    width: 4px;
+                    height: 1px;
+                    background: #fff;
+                    display: block;
+                    left: 10px;
+                    top: 16px;
+                    position: absolute;
+                  }
                 }
               }
             }

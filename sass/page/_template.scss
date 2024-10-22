@@ -45,8 +45,20 @@ body {
     background: #fff;
   }
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
-  h2 {
+  h2.title {
     line-height: 1.25em;
+    position: relative;
+    padding-bottom: 16px;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $tabBtnActive;
+    }
   }
 }
 
@@ -96,10 +108,10 @@ body {
       box-sizing: border-box;
       margin-bottom: 1rem;
     }
-    h2.title {
+    .bannerTitle {
       color: #fff;
-      position: relative;
-      z-index: 1;
+      font-size: 1.5em;
+      font-weight: bold;
       width: 34%;
       flex-shrink: 0;
       display: flex;
@@ -107,6 +119,8 @@ body {
       justify-content: flex-end;
       padding-right: 2rem;
       box-sizing: border-box;
+      position: relative;
+      z-index: 1;
       @include screen("tablet") {
         padding-right: 0;
       }
@@ -165,7 +179,7 @@ body {
     flex-basis: 100%;
     max-width: 100%;
     padding-bottom: 2rem;
-    .subMenu {
+    .subMenu.node3 {
       overflow: hidden;
       margin-bottom: 30px;
       padding-top: 2px;
@@ -173,11 +187,15 @@ body {
       @include screen("mobile") {
         overflow: visible;
       }
+      &:has(+ .subMenu.node4) {
+        margin-bottom: 1rem;
+      }
       .subMenuToggle {
         display: none;
         @include screen("mobile") {
           display: block;
           font-size: 1.125em;
+          font-weight: bold;
           width: 100%;
           margin: 0;
           position: relative;
@@ -229,8 +247,7 @@ body {
         }
         li {
           float: left;
-          margin-right: 40px;
-          margin-bottom: 12px;
+          margin-right: 30px;
           position: relative;
           @include screen("mobile") {
             float: none;
@@ -274,6 +291,9 @@ body {
               }
             }
             &.active {
+              @include screen("mobile") {
+                color: $subMemuHover;
+              }
               &::after {
                 content: "";
                 width: 100%;
@@ -291,22 +311,156 @@ body {
         }
       }
     }
-    .pagetitle {
-      font-size: 1.5em;
-      line-height: 1.25em;
-      margin: 0.4em 0;
-      font-weight: bold;
-      padding-bottom: 10px;
-      position: relative;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 4px;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: $tabBtnActive;
+    .subMenu.node4 {
+      overflow: hidden;
+      margin-bottom: 30px;
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+      background: #e1e1e1;
+      border-radius: 6px;
+      @include screen("mobile") {
+        overflow: visible;
+        padding: 0;
+      }
+      .subMenuToggle {
+        display: none;
+        @include screen("mobile") {
+          display: block;
+          font-size: 1.125em;
+          font-weight: bold;
+          width: 100%;
+          margin: 0;
+          position: relative;
+          border: 1px solid rgb(224, 224, 224);
+          &:focus {
+            border: 1px solid rgb(237, 237, 237);
+          }
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            border-top: 2px solid $fontColor;
+            border-right: 2px solid $fontColor;
+            transform: rotate(135deg) translateY(-50%);
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            margin-top: -12px;
+            transition: all 0.5s;
+          }
+          &.active {
+            background: $subMemuColor;
+            color: #fff;
+            &::after {
+              border-top: 2px solid #fff;
+              border-right: 2px solid #fff;
+              transform: rotate(-45deg);
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+      ul.subMenuList {
+        font-size: 1em;
+        font-weight: bold;
+        @include li-reset;
+        @include screen("mobile") {
+          display: none;
+          font-size: 1rem;
+          border-radius: 0 0 4px 4px;
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+          background: linear-gradient(
+            0deg,
+            rgb(230, 230, 230) 0%,
+            rgb(255, 255, 255) 100%
+          );
+          padding: 0 1rem;
+        }
+        li {
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 6px;
+          position: relative;
+          @include screen("mobile") {
+            float: none;
+            width: 100%;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+          }
+          a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: $fontColor;
+            transition: 0.5s all;
+            @include screen("mobile") {
+              padding: 12px;
+              text-align: center;
+            }
+            &:hover {
+              color: #fff;
+              background: $subMemuColor;
+              border-radius: 4px;
+              @include screen("mobile") {
+                color: $subMemuColor;
+                background: transparent;
+              }
+            }
+            &.active {
+              color: #fff;
+              background: $subMemuHover;
+              border-radius: 4px;
+              @include screen("mobile") {
+                color: $subMemuColor;
+                background: transparent;
+              }
+              &:hover {
+                background: $subMemuColor;
+                @include screen("mobile") {
+                  color: $subMemuColor;
+                  background: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // .pagetitle {
+    //   font-size: 1.5em;
+    //   line-height: 1.25em;
+    //   margin: 0.4em 0;
+    //   font-weight: bold;
+    //   padding-bottom: 10px;
+    //   position: relative;
+
+    // }
+    .bottomInfo {
+      font-size: 1em;
+      line-height: 1.5em;
+      list-style: none;
+      margin: 0 0 1em 0;
+      border-top: solid 4px #ccc;
+      padding: 1em 1.5em;
+      box-sizing: border-box;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        @extend %clearfix;
+        @include li-reset;
+        li {
+          flex: 1 1 calc(100% / 4);
+          margin-bottom: 0.5em;
+          @include screen("tablet") {
+            flex: 1 1 calc(100% / 3);
+          }
+          @include screen("mobile") {
+            flex: 1 1 calc(100% / 2);
+          }
+          @include screen("xs_mobile") {
+            flex: 1 1 calc(100% / 1);
+            text-align: center;
+          }
+        }
       }
     }
   }

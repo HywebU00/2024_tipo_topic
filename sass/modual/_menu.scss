@@ -43,10 +43,14 @@
   }
   // 預設選單 ul
   .container {
+    //第一層 ul
     > ul {
       @include li-reset;
       display: flex;
       flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
       // 第一層選單樣式
       > li {
         flex: 0 1 16%;
@@ -117,7 +121,7 @@
 
             &:hover,
             &:focus {
-              background: $primaryColor;
+              // background: $primaryColor;
             }
 
             &:after {

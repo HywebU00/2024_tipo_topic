@@ -373,32 +373,56 @@ tabFunction({
   index: 0, // 預設開啟第幾個
 });
 
-$(document).ready(function() {
-  var wwSmall = 768; // 設定你的視窗寬度閾值
+// $(document).ready(function() {
+//   var wwSmall = 768; // 設定你的視窗寬度閾值
 
-  function toggleMenu() {
-      // 當視窗寬度小於 wwSmall 時，顯示/隱藏下拉選單
-      if ($(window).width() <= wwSmall) {
-          $('.subMenuList').slideToggle();
-          // 切換按鈕的 active class，當展開時添加，收起時移除
-          $('.subMenuToggle').toggleClass('active');
-      }
-  }
-  // 點擊按鈕切換顯示和 class
+//   function toggleMenu() {
+//       // 當視窗寬度小於 wwSmall 時，顯示/隱藏下拉選單
+//       if ($(window).width() <= wwSmall) {
+//           $('.subMenuList').slideToggle();
+//           // 切換按鈕的 active class，當展開時添加，收起時移除
+//           $('.subMenuToggle').toggleClass('active');
+//       }
+//   }
+//   // 點擊按鈕切換顯示和 class
+//   $('.subMenuToggle').click(function() {
+//       toggleMenu();
+//   });
+
+//   // 當視窗大小改變時重設選單狀態和按鈕樣式
+//   $(window).resize(function() {
+//       if ($(window).width() > wwSmall) {
+//           $('.subMenuList').css('display', 'block'); // 大於 wwSmall 時，顯示選單
+//           $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+//       } else {
+//           $('.subMenuList').css('display', 'none'); // 小於 wwSmall 時，隱藏選單
+//           $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+//       }
+//   });
+// });
+
+$(document).ready(function() {
+  var wwSmall = 600; // 設定你的視窗寬度閾值
+
+  // 點擊當前按鈕時，觸發 toggleMenu
   $('.subMenuToggle').click(function() {
-      toggleMenu();
+      // 使用 this 找到對應的下拉選單
+      $(this).siblings('.subMenuList').slideToggle();
+      // 使用 this 切換當前按鈕的 active class
+      $(this).toggleClass('active');
   });
 
-  // 當視窗大小改變時重設選單狀態和按鈕樣式
+  // 當視窗大小改變時重設所有下拉選單和按鈕狀態
   $(window).resize(function() {
       if ($(window).width() > wwSmall) {
-          $('.subMenuList').css('display', 'block'); // 大於 wwSmall 時，顯示選單
-          $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+          $('.subMenuList').css('display', 'block'); // 大於 wwSmall 時，顯示所有選單
+          $('.subMenuToggle').removeClass('active'); // 移除所有按鈕的 active 狀態
       } else {
-          $('.subMenuList').css('display', 'none'); // 小於 wwSmall 時，隱藏選單
-          $('.subMenuToggle').removeClass('active'); // 重設按鈕狀態
+          $('.subMenuList').css('display', 'none'); // 小於 wwSmall 時，隱藏所有選單
+          $('.subMenuToggle').removeClass('active'); // 移除所有按鈕的 active 狀態
       }
   });
 });
+
 
 
