@@ -22,20 +22,21 @@
   }
   .list {
     & > ul,
-    ol {
+    & > ol {
       list-style-type: none;
       padding: 0;
-      border-top: 2px solid $primaryColor;
+      border-top: 4px solid $primaryColor;
       & > li {
         padding: 1em 0;
         border-bottom: 1px solid #ddd;
         position: relative; // outline: 1px solid blue;
+
         .tag {
           margin-left: 2em;
         }
         & > a {
           display: block;
-          padding-left: 2em;
+          padding-left: 3.5em;
           position: relative;
           line-height: 1.45em;
           color: $color-word;
@@ -43,7 +44,7 @@
             color: $aHover;
           }
           .num {
-            width: 1.5em;
+            width: 3em;
             text-align: right;
             position: absolute;
             top: 0;
@@ -53,18 +54,47 @@
               display: inline-block;
             }
           }
-        }
-        span.dept {
-          display: inline-block;
-          font-size: 0.938em;
-          @include screen("mobile") {
-            display: block;
+          .listTitle {
+            font-size: 1.125em;
+            color: $secondaryColor;
+            line-height: 160%;
+            font-weight: bold;
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
-        }
-        time {
-          display: block;
-          color: #aaa;
-          font-size: 0.938em;
+          .listText {
+            color: #555;
+            margin-top: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+          span.dept {
+            display: inline-block;
+            color: #767676;
+            font-size: 0.938em;
+          }
+          time {
+            display: inline-block;
+            color: #767676;
+            font-size: 0.938em;
+            margin-right: 8px;
+          }
+          &:hover {
+            .num,
+            .listTitle {
+              color: $fontColor;
+            }
+            .listText {
+              color: #555;
+            }
+          }
         }
       }
     }

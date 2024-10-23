@@ -5,34 +5,38 @@
   ul {
     @include li-reset;
     li {
-      margin: 0px 6px 3px 0px;
+      margin: 0px 6px 6px 0px;
       display: block;
       float: left;
     }
   }
   a {
     border: 1px solid #ccc;
-    background: #ccc;
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 255) 0%,
+      rgb(230, 230, 230) 100%
+    );
     padding: 0.5em 1.2em;
     display: block;
     color: #333;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 4px;
     &:hover,
     &:focus {
       color: #fff;
       background: $primaryColor;
-      border: 1px solid $primaryColor;
+      border: 1px solid darken($color: $primaryColor, $amount: 10);
       box-shadow: none;
     }
     &.active {
       color: #fff;
       background: $secondaryColor;
-      border: 1px solid $secondaryColor;
+      border: 1px solid darken($color: $secondaryColor, $amount: 10);
       &:hover {
         background: $primaryColor;
         color: #fff;
-        border: 1px solid $primaryColor;
+        border: 1px solid darken($color: $primaryColor, $amount: 10);
       }
     }
     span {

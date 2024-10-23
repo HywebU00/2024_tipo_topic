@@ -23,12 +23,26 @@
   .advSearch {
     flex: 1 1 auto;
     button {
-      background: $advSearchColor;
-      border: 1px solid $advSearchColor;
-      color: #fff;
+      background: #ccc;
+      border: 1px solid #ccc;
+      margin: 0;
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 4px;
+        background: url(../images/basic/icon_search.png) no-repeat center center;
+        background-size: cover;
+        vertical-align: middle;
+      }
       &.active {
-        background: $advSearchHover;
-        border: 1px solid $advSearchHover;
+        background: $advSearchColor;
+        border: 1px solid $advSearchColor;
+        color: #fff;
+        &::before {
+          filter: invert(1);
+        }
       }
     }
   }

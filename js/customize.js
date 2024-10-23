@@ -451,9 +451,6 @@ $(document).ready(function() {
   });
 });
 
-
-
-
 //accordion
 $(document).ready(function () {
   function accordionFunction(obj) {
