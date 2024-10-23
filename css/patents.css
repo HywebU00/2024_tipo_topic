@@ -12429,6 +12429,7 @@ h2.title {
   position: relative;
   line-height: 1.45em;
   color: #292929;
+  overflow: hidden;
 }
 .lp .list > ul > li > a:hover, .lp .list > ol > li > a:hover {
   color: rgb(142, 61, 255);
@@ -12443,6 +12444,19 @@ h2.title {
 .lp .list > ul > li > a .num:after, .lp .list > ol > li > a .num:after {
   content: ".";
   display: inline-block;
+}
+.lp .list > ul > li > a .listPic, .lp .list > ol > li > a .listPic {
+  float: left;
+  width: 240px;
+  max-height: 180px;
+  margin-right: 20px;
+  text-align: center;
+}
+.lp .list > ul > li > a .listPic img, .lp .list > ol > li > a .listPic img {
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  margin: 0 auto;
 }
 .lp .list > ul > li > a .listTitle, .lp .list > ol > li > a .listTitle {
   font-size: 1.125em;
@@ -12465,7 +12479,7 @@ h2.title {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.lp .list > ul > li > a span.dept, .lp .list > ol > li > a span.dept {
+.lp .list > ul > li > a span.listDept, .lp .list > ol > li > a span.listDept {
   display: inline-block;
   color: #767676;
   font-size: 0.938em;
