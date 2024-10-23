@@ -1114,7 +1114,7 @@ $(function () {
     threshold: 0,
   });
 
-  console.log($('.sidebar .menu a,.sidebar .menu button').eq($('.sidebar .menu a,.sidebar .menu button').length - 2));
+  // console.log($('.sidebar .menu a,.sidebar .menu button').eq($('.sidebar .menu a,.sidebar .menu button').length - 2));
 
   $('.sidebar a,.sidebar button')
     .eq(0)

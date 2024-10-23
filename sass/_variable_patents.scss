@@ -57,6 +57,11 @@ $subMemuHover: #6c1bb8;
 $advSearchColor: #8e3dff;
 $advSearchHover: #6c1bb8;
 
+$fatfooterBgColor: #333; //fatFooter 底色
+$fatfooterNum: 6; //fatFooter數量
+$fatfooterColor: #a362fe; //fatFooter箭頭hover顏色 第一層顏色
+$footerColor: #a362fe; //footer字hover
+
 //mp區域
 $sectionTitle: #6c1bb8; //section標題
 $mpSliderPage: #6c1bb8; //mpSlider頁碼底色
@@ -82,11 +87,6 @@ $judgmentColor2: #b01fe8; //近期重要判決文字hover
 $resourceBg: url(../images/mp/patents/source_bg.jpg);
 $resourceMore: #6c1bb8;
 
-$fatfooterBgColor: #333; //fatFooter 底色
-$fatfooterNum: 6; //fatFooter數量
-$fatfooterColor: #a362fe; //fatFooter箭頭hover顏色 第一層顏色
-
-$footerColor: #a362fe; //footer字hover
 //專利版本
 $th1: #5d0981;
 $th2: #79239e;
@@ -95,6 +95,8 @@ $thb: #9c57ba;
 $tRB: #9c57ba;
 $ipcTr1: #79239e;
 $ipcTr2: #9c57ba;
+
+$faqColor: #6c1bb8;
 
 $innerBannerLine: #ff0088;
 $innerBanner: url(../images/mp/patents/innerBanner.png);

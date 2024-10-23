@@ -1,20 +1,77 @@
-.accordion {
-    ul {
-        list-style: none;
-        li {
-            margin-bottom: 0.5em;
-            a {
-                display: block;
-                background-color: #21baff;
-                color: #fff;
-                text-decoration: none;
-                padding: 5px;
-            }
+.faq .accordion {
+  margin-bottom: 2rem;
+  ul {
+    @include li-reset;
+    li.accordionList {
+      margin-bottom: 10px;
+      .accordionBtn {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        font-size: 1.125em;
+        font-weight: bold;
+        padding: 16px 100px 16px 70px;
+        position: relative;
+        border: 1px solid $faqColor;
+        &::before {
+          content: "Q";
+          position: absolute;
+          font-size: 2rem;
+          padding: 16px;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          color: #fff;
+          background: $faqColor;
+          display: block;
         }
+        .accordionState {
+          font-weight: normal;
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          padding: 4px 30px 4px 10px;
+          background: #f1f1f1;
+          border-radius: 25px;
+          color: #666;
+          &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            display: block;
+            border-top: 2px solid #666;
+            border-right: 2px solid #666;
+            transform: rotate(135deg);
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            transition: all 0.5s;
+          }
+        }
+      }
+      .accordionContent {
+        .content {
+          padding: 1rem;
+          p {
+            margin-top: 0;
+          }
+          .dep {
+            text-align: right;
+          }
+        }
+      }
+      &.active {
+        .accordionBtn {
+          .accordionState {
+            &::after {
+              top: 12px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
-    .accordion-content {
-        line-height: 1.45em;
-        padding: 5px 0;
-    }
+  }
 }
-// 
+//

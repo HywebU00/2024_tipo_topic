@@ -488,7 +488,6 @@ $(document).ready(function() {
 
 //accordion
 
-
 $(document).ready(function () {
   function accordionFunction(obj) {
     'use strict';
@@ -534,10 +533,12 @@ $(document).ready(function () {
         const $this = $(this);
         const $button = $this.find('.accordionBtn');
         const $content = $this.find('.accordionContent');
-        const itemAllTarget = $content.find('a,button,input,textarea,select');
+        const itemAllTarget = $content.find('a,button,input,textarea,select'); // 可聚焦元素
         const firstItem = itemAllTarget.first();
         const lastItem = itemAllTarget.last();
         const siblings = $this.siblings('.accordionList');
+        const $nextButton = accordion.find('.accordionList').eq(index + 1).find('.accordionBtn'); // 下一個 accordion 按鈕
+        const $prevButton = accordion.find('.accordionList').eq(index - 1).find('.accordionBtn'); // 上一個 accordion 按鈕
 
         // 點擊事件
         if (openSwitch) {
@@ -575,23 +576,39 @@ $(document).ready(function () {
 
           // 鍵盤導航
           $button.on('keydown', function (e) {
-            if (e.which === 9 && !e.shiftKey) {
+            if (e.which === 9 && !e.shiftKey) { // Tab 鍵
               if (!$this.hasClass('active')) {
                 $content.slideDown();
               }
+
               e.preventDefault();
-              firstItem.focus();
-            } else if (e.which === 9 && e.shiftKey) {
+
+              if (itemAllTarget.length > 0) {
+                // 如果內容中有可聚焦元素，將焦點設置到第一個
+                firstItem.focus();
+              } else {
+                // 如果沒有可聚焦元素，將焦點移到下一個按鈕
+                $nextButton.focus();
+              }
+            } else if (e.which === 9 && e.shiftKey) { // Shift + Tab 鍵
               e.preventDefault();
-              lastItem.focus();
+
+              if (itemAllTarget.length > 0) {
+                // 如果內容中有可聚焦元素，將焦點設置到最後一個
+                lastItem.focus();
+              } else {
+                // 如果沒有可聚焦元素，將焦點移到上一個按鈕
+                $prevButton.focus();
+              }
             }
           });
         }
 
-        // 內容鍵盤導航
+        // 內容內部的鍵盤導航
         itemAllTarget.each(function () {
           $(this).on('keydown', function (e) {
             if (e.which === 9 && e.shiftKey && $(this).is(firstItem)) {
+              // Shift + Tab 從第一個聚焦元素回到按鈕
               $button.focus();
             }
           });
