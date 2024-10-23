@@ -464,6 +464,9 @@ body {
     }
     .advSearchContent {
       display: none;
+      &.v2 {
+        display: block;
+      }
       .content {
         padding: 24px 40px;
         margin-top: 8px;

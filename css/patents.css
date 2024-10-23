@@ -10237,6 +10237,9 @@ body.noscroll {
 .innerpage .center_block .advSearchContent {
   display: none;
 }
+.innerpage .center_block .advSearchContent.v2 {
+  display: block;
+}
 .innerpage .center_block .advSearchContent .content {
   padding: 24px 40px;
   margin-top: 8px;
