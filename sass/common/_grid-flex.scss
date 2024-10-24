@@ -66,6 +66,16 @@ $m-gutter: 16px;
         justify-content: center;
       }
     }
+    .card {
+      margin-bottom: 30px;
+      @include flex-xs-equal(1, 0px);
+      @include flex-sm-equal(2, $m-gutter);
+      @include flex-md-equal(3, $m-gutter);
+      @include flex-lg-equal(3, $m-gutter);
+      @include screen("mobile") {
+        justify-content: center;
+      }
+    }
   }
 }
 // .flex-equal-4{

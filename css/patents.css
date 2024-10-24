@@ -675,6 +675,107 @@ img {
             justify-content: center;
   }
 }
+.flex-equal-3 .Flex-set .card {
+  margin-bottom: 30px;
+}
+@media (min-width: 320px) {
+  .flex-equal-3 .Flex-set .card {
+    -ms-flex-preferred-size: calc(100% / 1 - 0px);
+        flex-basis: calc(100% / 1 - 0px);
+    max-width: calc(100% / 1 - 0px);
+  }
+  .flex-equal-3 .Flex-set .card:last-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .flex-equal-3 .Flex-set .card {
+    -ms-flex-preferred-size: calc(100% / 2 - 16px);
+        flex-basis: calc(100% / 2 - 16px);
+    max-width: calc(100% / 2 - 16px);
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-1) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-2) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-3) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-4) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-5) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-6) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-7) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-8) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-9) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-10) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-11) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(12n-12) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .flex-equal-3 .Flex-set .card {
+    -ms-flex-preferred-size: calc(100% / 3 - 16px);
+        flex-basis: calc(100% / 3 - 16px);
+    max-width: calc(100% / 3 - 16px);
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n-1) {
+    margin-right: calc((100% / 3 - 16px) * 1 + 16px * 3 * 1 / (3 - 1));
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n-2) {
+    margin-right: calc((100% / 3 - 16px) * 2 + 16px * 3 * 2 / (3 - 1));
+  }
+}
+@media (min-width: 1400px) {
+  .flex-equal-3 .Flex-set .card {
+    -ms-flex-preferred-size: calc(100% / 3 - 16px);
+        flex-basis: calc(100% / 3 - 16px);
+    max-width: calc(100% / 3 - 16px);
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n-1) {
+    margin-right: calc((100% / 3 - 16px) * 1 + 16px * 3 * 1 / (3 - 1));
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n) {
+    margin-right: 0;
+  }
+  .flex-equal-3 .Flex-set .card:last-child:nth-child(3n-2) {
+    margin-right: calc((100% / 3 - 16px) * 2 + 16px * 3 * 2 / (3 - 1));
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex-equal-3 .Flex-set .card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .flex-6-6 .col {
   position: relative;
@@ -9976,6 +10077,7 @@ body.noscroll {
   float: left;
   margin-right: 30px;
   position: relative;
+  padding: 2px;
 }
 .innerpage .center_block .subMenu.node3 ul.subMenuList li:last-child {
   margin-right: 0;
@@ -12215,6 +12317,135 @@ h2.sectionTitle::after {
 }
 .resource .content .block .video .slick-dots li button:before {
   font-size: 0;
+}
+
+.npCard {
+  margin: 0.2em 0;
+  padding: 0.5em 0 0.5em;
+}
+.npCard .Flex-set {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.npCard .card {
+  width: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  outline: none;
+  position: relative;
+}
+.npCard .card:focus-visible {
+  outline: 2px solid #ff0088;
+}
+.npCard .card:focus-visible .card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.npCard .card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+.npCard .card .card-inner:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.npCard .card .card-front,
+.npCard .card .card-back {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+  padding: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.npCard .card .card-front a,
+.npCard .card .card-back a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+.npCard .card .card-front a:focus-visible,
+.npCard .card .card-back a:focus-visible {
+  outline: 2px solid #ff5722;
+}
+.npCard .card .card-front {
+  position: absolute;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  line-height: 160%;
+  text-align: center;
+  font-weight: bold;
+  color: #6c1bb8;
+}
+.npCard .card .card-back {
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: url(../images/mp/patents/source_bg.jpg) center bottom;
+  background-size: cover;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.npCard .card .card-back .cardTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.npCard .card .card-back .cardTitle a {
+  font-size: 1.25em;
+  color: #fff;
+}
+.npCard .card .card-back ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+.npCard .card .card-back ul li a {
+  text-align: center;
+  display: block;
+  padding: 6px 8px;
+  background: #fff;
+  color: #292929;
+  border-radius: 2px;
+}
+.npCard .card .card-back ul li a:hover, .npCard .card .card-back ul li a:focus-visible {
+  background: #333;
+  color: #fff;
+}
+.npCard .card:focus-within .card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 h1.title,

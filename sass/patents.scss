@@ -48,8 +48,9 @@
 // 頁面
 @import "page/_template"; //版型初始設定
 @import "page/_mp"; //首頁
+@import "page/_np"; //NP
 @import "page/_cp"; //CP
-@import "page/_lp"; //CP
+@import "page/_lp"; //LP
 @import "page/_sitemap"; //Sitemap
 @import "page/_left_block"; //左欄left_block
 @import "common/_print"; //列印樣式
