@@ -9958,7 +9958,7 @@ body.noscroll {
 .innerpage .innerBanner .banner {
   width: 76%;
   height: 280px;
-  border-radius: 20px;
+  border-radius: 8px;
   background-image: url(../images/mp/patents/innerBanner.png);
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -12385,10 +12385,7 @@ h2.sectionTitle::after {
 }
 .npCard .card .card-front a,
 .npCard .card .card-back a {
-  margin: 10px 0;
   text-decoration: none;
-  color: #007bff;
-  font-size: 18px;
 }
 .npCard .card .card-front a:focus-visible,
 .npCard .card .card-back a:focus-visible {
@@ -12420,16 +12417,19 @@ h2.sectionTitle::after {
   font-weight: bold;
   margin-bottom: 16px;
   text-align: center;
+  font-size: 1.25em;
+  color: #fff;
 }
 .npCard .card .card-back .cardTitle a {
-  font-size: 1.25em;
   color: #fff;
 }
 .npCard .card .card-back ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.875rem;
+}
+.npCard .card .card-back ul li {
+  margin-bottom: 4px;
 }
 .npCard .card .card-back ul li a {
   text-align: center;
