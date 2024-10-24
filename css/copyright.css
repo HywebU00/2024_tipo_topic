@@ -12402,8 +12402,6 @@ h2.sectionTitle::after {
   text-align: center;
   font-weight: bold;
   color: #6c1bb8;
-  background: url(../images/mp/patents/card_bg.jpg) center 0;
-  background-size: cover;
 }
 .npCard .card .card-back {
   height: 100%;
@@ -13671,4 +13669,4 @@ h2.title {
 .patents .ipc_table th,
 .patents .ipc_table td {
   border-right: 1px solid #ccc;
-}/*# sourceMappingURL=patents.css.map */
+}/*# sourceMappingURL=copyright.css.map */
