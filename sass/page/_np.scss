@@ -103,3 +103,41 @@
     }
   }
 }
+.np {
+  position: relative;
+}
+.outer {
+  ul {
+    position: unset;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    list-style: none;
+    width: 33%;
+  }
+  ul:nth-child(1) {
+    background: #dedede;
+  }
+  ul ul {
+    background: #c8c8c8;
+  }
+  ul ul ul {
+    background: #b1b1b1;
+  }
+  ul:not(:first-child) {
+    left: 100%;
+    display: none;
+    width: 100%;
+  }
+  li.hasChild > a {
+    color: orange;
+  }
+  li.active > a {
+    color: red;
+  }
+  li.active > ul {
+    display: block;
+  }
+}

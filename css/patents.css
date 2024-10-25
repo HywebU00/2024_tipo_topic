@@ -11266,7 +11266,7 @@ h2.sectionTitle::after {
 }
 
 .news {
-  padding: 30px 8.3% 130px;
+  padding: 60px 8.3% 130px;
   position: relative;
   overflow: hidden;
 }
@@ -12539,6 +12539,44 @@ h2.sectionTitle::after {
 .npCard .card:focus-within .card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.np {
+  position: relative;
+}
+
+.outer ul {
+  position: unset;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  list-style: none;
+  width: 33%;
+}
+.outer ul:nth-child(1) {
+  background: #dedede;
+}
+.outer ul ul {
+  background: #c8c8c8;
+}
+.outer ul ul ul {
+  background: #b1b1b1;
+}
+.outer ul:not(:first-child) {
+  left: 100%;
+  display: none;
+  width: 100%;
+}
+.outer li.hasChild > a {
+  color: orange;
+}
+.outer li.active > a {
+  color: red;
+}
+.outer li.active > ul {
+  display: block;
 }
 
 h1.title,

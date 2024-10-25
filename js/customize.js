@@ -595,3 +595,68 @@ $(document).ready(function () {
   });
 });
 
+//npNode選單
+$(function () {
+  $(".outer ul").find("li").has("ul").addClass("hasChild");
+
+  $(".outer ul li.hasChild > a").on("click", function (e) {
+    $(".outer").attr("style", "");
+    $(".outer ul").attr("style", "");
+
+    let checkHeight = [];
+    e.preventDefault();
+
+    $(this).parent("li").siblings().removeClass("active");
+    $(this).parent("li").siblings().find("li").removeClass("active");
+    $(this).parent("li").toggleClass("active");
+
+    checkHeight.push($("ul").eq(0).height());
+    $(".outer li.active")
+      .children("ul")
+      .each(function () {
+        checkHeight.push($(this).height());
+      });
+
+    const maxHeight = Math.max(...checkHeight);
+    $(".outer").css("height", `${maxHeight}px`);
+    $(".outer ul").css("bottom", "0");
+  });
+});
+
+
+
+
+
+// $(function () {
+//   // 為所有含有子選單的 <li> 加上 hasChild class
+//   $(".npNode ul li").has("ul").addClass("hasChild");
+
+//   // 點擊展開選單
+//   $(".npNode .hasChild > a").on("click", function (e) {
+//     e.preventDefault();  // 阻止預設行為，以確保單擊即可展開
+
+//     const $li = $(this).parent("li");
+
+//     // 隱藏同層其他選單並移除 active 狀態
+//     $li.siblings().removeClass("active").find("ul").hide();
+//     $li.siblings().find("li").removeClass("active");  // 清除子選單的 active 狀態
+
+//     // 切換當前選單的顯示狀態
+//     $li.toggleClass("active");
+//     $li.children("ul").toggle();  // 單擊展開或收起子選單
+
+//     // 計算所有顯示中的 <ul> 的最大高度
+//     let maxHeight = 0;
+//     $(".npNode ul").each(function () {
+//       if ($(this).is(":visible")) {
+//         maxHeight = Math.max(maxHeight, $(this).outerHeight());
+//       }
+//     });
+
+//     // 將最大高度設置到 .npNode 上
+//     $(".npNode").css("height", `${maxHeight}px`);
+//   });
+// });
+
+
+
