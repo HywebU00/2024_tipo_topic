@@ -44,6 +44,9 @@ body {
   .container {
     background: #fff;
   }
+  & > .container {
+    overflow: hidden;
+  }
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
   h2.title {
     line-height: 1.25em;

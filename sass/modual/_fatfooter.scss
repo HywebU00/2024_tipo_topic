@@ -134,11 +134,14 @@
               text-align: left;
               font-size: 1rem;
               line-height: 1.5em;
-              padding: 0.5em 0;
+              padding: 0.4em 0;
               background: none;
               color: #fff;
               @include screen("tablet") {
                 display: inline-block;
+              }
+              &:hover {
+                color: $fatfooterHover;
               }
             }
           }

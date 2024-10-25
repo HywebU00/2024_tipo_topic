@@ -5221,7 +5221,7 @@ footer .footer_icon img {
           flex-grow: 1;
   -ms-flex-negative: 1;
       flex-shrink: 1;
-  width: calc((100% - 100px) / 6);
+  width: calc((100% - 120px) / 7);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -5275,7 +5275,7 @@ footer .footer_icon img {
   text-align: left;
   font-size: 1rem;
   line-height: 1.5em;
-  padding: 0.5em 0;
+  padding: 0.4em 0;
   background: none;
   color: #fff;
 }
@@ -5287,6 +5287,9 @@ footer .footer_icon img {
   .fatfooter nav > ul > li > ul > li > a {
     display: inline-block;
   }
+}
+.fatfooter nav > ul > li > ul > li > a:hover {
+  color: #a362fe;
 }
 .fatfooter nav > ul > li > ul > ul {
   display: none;
@@ -9805,6 +9808,9 @@ body.noscroll {
 .main .container {
   background: #fff;
 }
+.main > .container {
+  overflow: hidden;
+}
 .main h2.title {
   line-height: 1.25em;
   position: relative;
@@ -11167,7 +11173,7 @@ h2.sectionTitle::after {
 }
 
 .quickLink {
-  padding: 30px 8.3% 60px;
+  padding: 60px 8.3%;
 }
 @media screen and (max-width: 991px) {
   .quickLink {
@@ -11189,6 +11195,9 @@ h2.sectionTitle::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
 }
 @media screen and (max-width: 991px) {
   .quickLink ul {
@@ -11205,6 +11214,9 @@ h2.sectionTitle::after {
 }
 .quickLink ul li {
   text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .quickLink ul li a {
   color: #292929;
@@ -11239,7 +11251,7 @@ h2.sectionTitle::after {
   height: 40px;
 }
 .quickLink ul li a .text {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 @media screen and (max-width: 991px) {
@@ -11364,19 +11376,29 @@ h2.sectionTitle::after {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(230, 230, 230)), to(rgb(255, 255, 255)));
   background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
   opacity: 0.8;
+  border-radius: 0 0 4px 4px;
 }
-.news .tabSet .tabContentGroup .tabContent .content {
+.news .tabSet .tabContentGroup .tabContent .modeBBtn {
+  font-size: 1.125rem;
+  font-weight: bold;
+  background: #d1d1d1;
+}
+.news .tabSet .tabContentGroup .tabContent .modeBBtn.active {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+}
+.news .content {
   padding: 34px 40px;
   overflow: hidden;
   font-size: 1.125rem;
 }
 @media screen and (max-width: 991px) {
-  .news .tabSet .tabContentGroup .tabContent .content {
+  .news .content {
     padding: 20px;
     font-size: 1rem;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic {
+.news .content .newsPic {
   width: 280px;
   height: 299px;
   float: left;
@@ -11386,25 +11408,25 @@ h2.sectionTitle::after {
   margin-right: 6%;
 }
 @media screen and (max-width: 991px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic {
+  .news .content .newsPic {
     margin-right: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic {
+  .news .content .newsPic {
     width: 100%;
     float: none;
     margin-right: 0;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic {
+  .news .content .newsPic {
     width: 100%;
     height: auto;
     aspect-ratio: 280/299;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a {
+.news .content .newsPic a {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -11420,20 +11442,20 @@ h2.sectionTitle::after {
   color: #fff;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a {
+  .news .content .newsPic a {
     display: block;
     color: #292929;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a {
+  .news .content .newsPic a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     color: #fff;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a::before {
+.news .content .newsPic a::before {
   content: "";
   position: absolute;
   z-index: 2;
@@ -11441,43 +11463,43 @@ h2.sectionTitle::after {
   inset: 0;
   display: none;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic {
+.news .content .newsPic a .pic {
   position: absolute;
   inset: 0;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic {
+  .news .content .newsPic a .pic {
     position: relative;
     float: left;
     margin-right: 30px;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic {
+  .news .content .newsPic a .pic {
     position: absolute;
     float: none;
     margin-right: 0;
     margin-bottom: 10px;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic img {
+.news .content .newsPic a .pic img {
   display: block;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic img {
+  .news .content .newsPic a .pic img {
     aspect-ratio: 280/299;
     -webkit-transition: none;
     transition: none;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .pic img {
+  .news .content .newsPic a .pic img {
     width: 100%;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a time {
+.news .content .newsPic a time {
   position: relative;
   padding: 6px 24px;
   max-width: 138px;
@@ -11488,7 +11510,7 @@ h2.sectionTitle::after {
   border-radius: 0 8px 0 0;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a time {
+  .news .content .newsPic a time {
     background: none;
     color: #4c1795;
     padding: 0;
@@ -11497,7 +11519,7 @@ h2.sectionTitle::after {
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a time {
+  .news .content .newsPic a time {
     background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
     background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
     color: #fff;
@@ -11506,25 +11528,25 @@ h2.sectionTitle::after {
     margin-bottom: 0;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a .text {
+.news .content .newsPic a .text {
   position: relative;
   padding: 14px 24px;
   background: rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .text {
+  .news .content .newsPic a .text {
     overflow: hidden;
     padding: 0;
     background: none;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .text {
+  .news .content .newsPic a .text {
     padding: 14px 24px;
     background: rgba(0, 0, 0, 0.8);
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a .text div {
+.news .content .newsPic a .text div {
   margin: 0;
   max-height: 110px;
   line-height: 28px;
@@ -11535,49 +11557,49 @@ h2.sectionTitle::after {
   -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .text div {
+  .news .content .newsPic a .text div {
     max-height: none;
     -webkit-line-clamp: 8;
   }
 }
 @media screen and (max-width: 575px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a .text div {
+  .news .content .newsPic a .text div {
     max-height: 110px;
     -webkit-line-clamp: 3;
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a:hover .pic img, .news .tabSet .tabContentGroup .tabContent .content .newsPic a:focus-visible .pic img {
+.news .content .newsPic a:hover .pic img, .news .content .newsPic a:focus-visible .pic img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content .newsPic a:hover .pic img, .news .tabSet .tabContentGroup .tabContent .content .newsPic a:focus-visible .pic img {
+  .news .content .newsPic a:hover .pic img, .news .content .newsPic a:focus-visible .pic img {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsPic a:focus-visible::before {
+.news .content .newsPic a:focus-visible::before {
   display: block;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList {
+.news .content .newsList {
   overflow: hidden;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList ul {
+.news .content .newsList ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList ul li {
+.news .content .newsList ul li {
   padding: 24px 6px;
   border-bottom: 1px solid #979797;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList ul li time {
+.news .content .newsList ul li time {
   float: left;
   color: #4c1795;
   margin-right: 20px;
   padding: 4px;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList ul li a {
+.news .content .newsList ul li a {
   color: #292929;
   display: block;
   white-space: nowrap;
@@ -11587,10 +11609,10 @@ h2.sectionTitle::after {
   transition: all 0.3s ease-out;
   padding: 4px;
 }
-.news .tabSet .tabContentGroup .tabContent .content .newsList ul li a:hover, .news .tabSet .tabContentGroup .tabContent .content .newsList ul li a:focus-visible {
+.news .content .newsList ul li a:hover, .news .content .newsList ul li a:focus-visible {
   color: #4c1795;
 }
-.news .tabSet .tabContentGroup .tabContent .content a.more {
+.news .content a.more {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -11607,7 +11629,7 @@ h2.sectionTitle::after {
   transition: all 0.5s ease-out;
 }
 @media screen and (max-width: 767px) {
-  .news .tabSet .tabContentGroup .tabContent .content a.more {
+  .news .content a.more {
     position: relative;
     right: auto;
     left: 50%;
@@ -11618,7 +11640,7 @@ h2.sectionTitle::after {
             transform: translate(-50%, 0);
   }
 }
-.news .tabSet .tabContentGroup .tabContent .content a.more::after {
+.news .content a.more::after {
   content: "";
   width: 9px;
   height: 9px;
@@ -11631,24 +11653,33 @@ h2.sectionTitle::after {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.news .tabSet .tabContentGroup .tabContent .content a.more:hover, .news .tabSet .tabContentGroup .tabContent .content a.more:focus-visible {
+.news .content a.more:hover, .news .content a.more:focus-visible {
   background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
   background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.news .tabSet .tabContentGroup .tabContent .content a.more:hover::after, .news .tabSet .tabContentGroup .tabContent .content a.more:focus-visible::after {
+.news .content a.more:hover::after, .news .content a.more:focus-visible::after {
   -webkit-transform: translateX(5px) rotate(45deg);
           transform: translateX(5px) rotate(45deg);
 }
-.news .tabSet .tabContentGroup .tabContent .modeBBtn {
-  font-size: 1.125rem;
-  font-weight: bold;
-  background: #d1d1d1;
+.news.noTab .content {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 27px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 27px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
-.news .tabSet .tabContentGroup .tabContent .modeBBtn.active {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+.news.noTab .content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(230, 230, 230)), to(rgb(255, 255, 255)));
+  background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
+  opacity: 0.8;
+  border-radius: 0 0 4px 4px;
 }
 
 .column {
@@ -11695,6 +11726,7 @@ h2.sectionTitle::after {
 }
 .column .columnContent .sectionTitle {
   margin-bottom: 20px;
+  line-height: 100%;
 }
 .column .columnContent .content {
   font-size: 1.25rem;
@@ -11745,6 +11777,12 @@ h2.sectionTitle::after {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+.column .columnContent .content .topText .text p,
+.column .columnContent .content .topText .text ul,
+.column .columnContent .content .topText .text ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .column .columnContent .content .topText .more {
   font-size: 1.125rem;
   display: inline-block;
@@ -11777,17 +11815,53 @@ h2.sectionTitle::after {
   -webkit-transform: translateX(5px) rotate(45deg);
           transform: translateX(5px) rotate(45deg);
 }
-.column .columnContent .content .bottomSlider div {
-  padding: 2px;
+.column .columnContent .content .bottomSlider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.column .columnContent .content .bottomSlider .slick-track .slick-slide {
+  height: inherit !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.column .columnContent .content .bottomSlider .slick-track .slick-slide > div {
+  padding: 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .column .columnContent .content .bottomSlider a {
-  display: block;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #b01fe8;
-  line-height: 56px;
+  padding: 16px 4px;
   color: #fff;
   text-align: center;
   min-width: 160px;
   border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .column .columnContent .content .bottomSlider a:hover, .column .columnContent .content .bottomSlider a:focus-visible {
   background: #6c1bb8;
@@ -12134,7 +12208,7 @@ h2.sectionTitle::after {
 @media screen and (max-width: 767px) {
   .resource .content .block {
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 0;
     margin-bottom: 30px;
   }
 }
@@ -12147,6 +12221,11 @@ h2.sectionTitle::after {
   position: relative;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 767px) {
+  .resource .content .block .title {
+    text-align: center;
+  }
+}
 .resource .content .block .title::after {
   content: "";
   width: 94px;
@@ -12157,27 +12236,30 @@ h2.sectionTitle::after {
   left: 0;
   bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .resource .content .block .title::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 .resource .content .block ul {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 1.125rem;
 }
+@media screen and (max-width: 767px) {
+  .resource .content .block ul {
+    margin-bottom: 1em;
+  }
+}
 .resource .content .block ul li {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
   .resource .content .block ul li {
-    float: left;
-  }
-  .resource .content .block ul li::after {
-    content: "|";
-    margin: 0 10px;
-    color: #fff;
-    opacity: 0.6;
-  }
-  .resource .content .block ul li:last-child::after {
-    display: none;
+    text-align: center;
   }
 }
 .resource .content .block ul li a {
@@ -12199,6 +12281,15 @@ h2.sectionTitle::after {
   font-weight: bold;
   background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgb(230, 230, 230)));
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(230, 230, 230) 100%);
+}
+@media screen and (max-width: 767px) {
+  .resource .content .block .more {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: auto;
+  }
 }
 .resource .content .block .more::after {
   content: "";
