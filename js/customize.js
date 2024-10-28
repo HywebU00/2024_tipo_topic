@@ -653,76 +653,124 @@ $(document).ready(function () {
 // });
 
 
+// $(function () {
+//   $(".npNode ul").find("li").has("ul").addClass("hasChild");
+//   function initializeMenu() {
+//     $('.npNode').css('height', `${$('.npNode ul').eq(0).height()}px`);
+//     $(".npNode .hasChild > a").on("click", function (e) {
+//       $(".npNode").attr("style", "");
+//       $(".npNode ul").attr("style", "");
+
+//       let checkHeight = [];
+//       e.preventDefault();
+
+//       $(this).parent("li").siblings().removeClass("active");
+//       $(this).parent("li").siblings().find("li").removeClass("active");
+//       $(this).parent("li").toggleClass("active");
+
+//       checkHeight.push($(".npNode ul").eq(0).height());
+//       $(".npNode li.active")
+//         .children("ul")
+//         .each(function () {
+//           checkHeight.push($(this).height());
+//         });
+
+//       const maxHeight = Math.max(...checkHeight);
+//       $(".npNode").css("height", `${maxHeight}px`);
+//       $(".npNode ul").css("bottom", "0");
+//     });
+//   }
+
+//   function initializeToggleBehavior() {
+//     $(".npNode .hasChild > a").on("click", function (e) {
+//       e.preventDefault();
+//       // $(this).siblings("ul").toggle();  // 展開或收合相鄰的 <ul>
+//       $(this).parent("li").siblings().removeClass("active");
+//       $(this).parent("li").siblings().find("li").removeClass("active");
+//       $(this).parent("li").toggleClass("active");
+//     });
+//   }
+
+//   function checkWindowWidth() {
+//     // 清除所有點擊事件，避免重複綁定
+//     $(".npNode .hasChild > a").off("click");
+
+//     if ($(window).width() >= 768) {
+//       let checkHeight = [];
+//       checkHeight.push($(".npNode ul").eq(0).height());
+//       $(".npNode li.active")
+//         .children("ul")
+//         .each(function () {
+//           checkHeight.push($(this).height());
+//         });
+
+//       const maxHeight = Math.max(...checkHeight);
+//       $(".npNode").css("height", `${maxHeight}px`);
+//       $(".npNode ul").css("bottom", "0");
+//       initializeMenu();  // 大於等於768時執行 initializeMenu
+//     } else {
+//       $(".npNode").attr("style", "");
+//       $(".npNode ul").attr("style", "");
+//       initializeToggleBehavior();  // 小於768時執行簡單的展開/收合
+//     }
+//   }
+
+//   // 首次載入時執行
+//   checkWindowWidth();
+
+//   // 當視窗大小改變時重新檢查
+//   $(window).resize(function () {
+//     checkWindowWidth();
+//   });
+// });
+
+//npNode選單
 $(function () {
   $(".npNode ul").find("li").has("ul").addClass("hasChild");
+
+  function setMenuHeight() {
+    let heights = [$(".npNode ul").eq(0).height()];
+    $(".npNode li.active").children("ul").each(function () {
+      heights.push($(this).height());
+    });
+    $(".npNode").css("height", `${Math.max(...heights)}px`);
+    $(".npNode ul").css("bottom", "0");
+  }
+
   function initializeMenu() {
-    $('.npNode').css('height', `${$('.npNode ul').eq(0).height()}px`);
     $(".npNode .hasChild > a").on("click", function (e) {
-      $(".npNode").attr("style", "");
-      $(".npNode ul").attr("style", "");
-
-      let checkHeight = [];
       e.preventDefault();
+      $(".npNode").removeAttr("style");
+      $(".npNode ul").removeAttr("style");
 
-      $(this).parent("li").siblings().removeClass("active");
-      $(this).parent("li").siblings().find("li").removeClass("active");
-      $(this).parent("li").toggleClass("active");
-
-      checkHeight.push($(".npNode ul").eq(0).height());
-      $(".npNode li.active")
-        .children("ul")
-        .each(function () {
-          checkHeight.push($(this).height());
-        });
-
-      const maxHeight = Math.max(...checkHeight);
-      $(".npNode").css("height", `${maxHeight}px`);
-      $(".npNode ul").css("bottom", "0");
+      $(this).parent("li").toggleClass("active").siblings().removeClass("active").find("li").removeClass("active");
+      setMenuHeight();
     });
   }
 
   function initializeToggleBehavior() {
     $(".npNode .hasChild > a").on("click", function (e) {
       e.preventDefault();
-      // $(this).siblings("ul").toggle();  // 展開或收合相鄰的 <ul>
-      $(this).parent("li").siblings().removeClass("active");
-      $(this).parent("li").siblings().find("li").removeClass("active");
-      $(this).parent("li").toggleClass("active");
+      $(this).parent("li").toggleClass("active").siblings().removeClass("active").find("li").removeClass("active");
     });
   }
 
   function checkWindowWidth() {
-    // 清除所有點擊事件，避免重複綁定
     $(".npNode .hasChild > a").off("click");
-
     if ($(window).width() >= 768) {
-      let checkHeight = [];
-      checkHeight.push($(".npNode ul").eq(0).height());
-      $(".npNode li.active")
-        .children("ul")
-        .each(function () {
-          checkHeight.push($(this).height());
-        });
-
-      const maxHeight = Math.max(...checkHeight);
-      $(".npNode").css("height", `${maxHeight}px`);
-      $(".npNode ul").css("bottom", "0");
-      initializeMenu();  // 大於等於768時執行 initializeMenu
+      setMenuHeight();
+      initializeMenu();
     } else {
-      $(".npNode").attr("style", "");
-      $(".npNode ul").attr("style", "");
-      initializeToggleBehavior();  // 小於768時執行簡單的展開/收合
+      $(".npNode, .npNode ul").removeAttr("style");
+      initializeToggleBehavior();
     }
   }
 
-  // 首次載入時執行
+  // 初始化及監控視窗大小改變
   checkWindowWidth();
-
-  // 當視窗大小改變時重新檢查
-  $(window).resize(function () {
-    checkWindowWidth();
-  });
+  $(window).resize(checkWindowWidth);
 });
+
 
 
 
