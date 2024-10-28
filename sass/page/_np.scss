@@ -97,45 +97,173 @@
         }
       }
     }
-
     &:focus-within .card-inner {
       transform: rotateY(180deg); // 當背面的鏈接獲得焦點時保持翻轉
     }
   }
 }
-.np {
+.npNode {
   position: relative;
-}
-.outer {
+  @include screen("mobile") {
+    width: 100%;
+  }
+  .title1,
+  .title2,
+  .title3 {
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.125em;
+    @include screen("mobile") {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.8);
+      @include screen("mobile") {
+        display: none;
+      }
+    }
+  }
+  .title3 {
+    color: $fontColor;
+    &::after {
+      background: $fontColor;
+    }
+  }
+  .title2,
+  .title3 {
+    @include screen("mobile") {
+      display: none;
+    }
+  }
   ul {
     position: unset;
+    @include li-reset;
     top: 0;
-    padding: 0;
-    width: 100%;
     position: absolute;
-    margin: 0;
-    list-style: none;
-    width: 33%;
+    width: 33.3%;
+    @include screen("mobile") {
+      width: 100%;
+      position: relative;
+    }
   }
   ul:nth-child(1) {
-    background: #dedede;
+    background: $npNodebg1;
   }
   ul ul {
-    background: #c8c8c8;
+    background: $npNodebg2;
   }
   ul ul ul {
-    background: #b1b1b1;
+    background: $npNodebg3;
   }
   ul:not(:first-child) {
     left: 100%;
     display: none;
     width: 100%;
+    @include screen("mobile") {
+      left: 0;
+    }
+  }
+  li {
+    padding: 0 20px;
+    @include screen("mobile") {
+      padding: 0;
+    }
+    a {
+      display: block;
+      padding: 16px 20px 16px 0;
+      color: #fff;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      @include screen("mobile") {
+        padding: 16px 40px 16px 20px;
+      }
+    }
+    &.hasChild {
+      & > a {
+        &::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: 4px;
+          top: 50%;
+          margin-top: -5px;
+          border-top: 2px solid #fff;
+          border-right: 2px solid #fff;
+          transform: rotate(45deg);
+          @include screen("mobile") {
+            right: 20px;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+  & > ul {
+    & > li {
+      & > a {
+      }
+      &.active {
+        background: $npNodebg2;
+        @include screen("mobile") {
+          background: $npNodebg1;
+        }
+      }
+      & > ul {
+        & > li {
+          & > a {
+          }
+          &.active {
+            background: $npNodebg3;
+            @include screen("mobile") {
+              background: $npNodebg2;
+            }
+            & > a {
+              color: $fontColor;
+              @include screen("mobile") {
+                color: #fff;
+              }
+              &::before {
+                border-top: 2px solid $fontColor;
+                border-right: 2px solid $fontColor;
+                @include screen("mobile") {
+                  border-top: 2px solid #fff;
+                  border-right: 2px solid #fff;
+                }
+              }
+            }
+          }
+          & > ul {
+            & > li {
+              & > a {
+                color: $fontColor;
+                &.active {
+                  background: $npNodebg3;
+                  // @include screen("mobile") {
+                  //   background: $npNodebg2;
+                  // }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   li.hasChild > a {
-    color: orange;
+    // color: orange;
   }
   li.active > a {
-    color: red;
+    // color: red;
   }
   li.active > ul {
     display: block;

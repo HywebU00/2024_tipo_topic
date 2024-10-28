@@ -596,30 +596,131 @@ $(document).ready(function () {
 });
 
 //npNode選單
+// $(function () {
+//   $(".npNode ul").find("li").has("ul").addClass("hasChild");
+//   function initializeMenu() {
+//     $('.npNode').css('height', `${$('.npNode ul').eq(0).height()}px`);
+
+//     $(".npNode .hasChild > a").on("click", function (e) {
+//       $(".npNode").attr("style", "");
+//       $(".npNode ul").attr("style", "");
+
+//       let checkHeight = [];
+//       e.preventDefault();
+
+//       $(this).parent("li").siblings().removeClass("active");
+//       $(this).parent("li").siblings().find("li").removeClass("active");
+//       $(this).parent("li").toggleClass("active");
+
+//       checkHeight.push($(".npNode ul").eq(0).height());
+//       $(".npNode li.active")
+//         .children("ul")
+//         .each(function () {
+//           checkHeight.push($(this).height());
+//         });
+
+//       const maxHeight = Math.max(...checkHeight);
+//       $(".npNode").css("height", `${maxHeight}px`);
+//       $(".npNode ul").css("bottom", "0");
+//     });
+//   }
+
+//   function initializeToggleBehavior() {
+//     $(".npNode .hasChild > a").on("click", function (e) {
+//       e.preventDefault();
+//       $(this).siblings("ul").toggle();  // 展開或收合相鄰的 <ul>
+//     });
+//   }
+
+//   function checkWindowWidth() {
+//     // 清除所有點擊事件，避免重複綁定
+//     $(".npNode .hasChild > a").off("click");
+
+//     if ($(window).width() >= 768) {
+//       initializeMenu();  // 大於等於768時執行 initializeMenu
+//     } else {
+//       initializeToggleBehavior();  // 小於768時執行簡單的展開/收合
+//     }
+//   }
+
+//   // 首次載入時執行
+//   checkWindowWidth();
+
+//   // 當視窗大小改變時重新檢查
+//   $(window).resize(function () {
+//     checkWindowWidth();
+//   });
+// });
+
+
 $(function () {
-  $(".outer ul").find("li").has("ul").addClass("hasChild");
+  $(".npNode ul").find("li").has("ul").addClass("hasChild");
+  function initializeMenu() {
+    $('.npNode').css('height', `${$('.npNode ul').eq(0).height()}px`);
+    $(".npNode .hasChild > a").on("click", function (e) {
+      $(".npNode").attr("style", "");
+      $(".npNode ul").attr("style", "");
 
-  $(".outer ul li.hasChild > a").on("click", function (e) {
-    $(".outer").attr("style", "");
-    $(".outer ul").attr("style", "");
+      let checkHeight = [];
+      e.preventDefault();
 
-    let checkHeight = [];
-    e.preventDefault();
+      $(this).parent("li").siblings().removeClass("active");
+      $(this).parent("li").siblings().find("li").removeClass("active");
+      $(this).parent("li").toggleClass("active");
 
-    $(this).parent("li").siblings().removeClass("active");
-    $(this).parent("li").siblings().find("li").removeClass("active");
-    $(this).parent("li").toggleClass("active");
+      checkHeight.push($(".npNode ul").eq(0).height());
+      $(".npNode li.active")
+        .children("ul")
+        .each(function () {
+          checkHeight.push($(this).height());
+        });
 
-    checkHeight.push($("ul").eq(0).height());
-    $(".outer li.active")
-      .children("ul")
-      .each(function () {
-        checkHeight.push($(this).height());
-      });
+      const maxHeight = Math.max(...checkHeight);
+      $(".npNode").css("height", `${maxHeight}px`);
+      $(".npNode ul").css("bottom", "0");
+    });
+  }
 
-    const maxHeight = Math.max(...checkHeight);
-    $(".outer").css("height", `${maxHeight}px`);
-    $(".outer ul").css("bottom", "0");
+  function initializeToggleBehavior() {
+    $(".npNode .hasChild > a").on("click", function (e) {
+      e.preventDefault();
+      // $(this).siblings("ul").toggle();  // 展開或收合相鄰的 <ul>
+      $(this).parent("li").siblings().removeClass("active");
+      $(this).parent("li").siblings().find("li").removeClass("active");
+      $(this).parent("li").toggleClass("active");
+    });
+  }
+
+  function checkWindowWidth() {
+    // 清除所有點擊事件，避免重複綁定
+    $(".npNode .hasChild > a").off("click");
+
+    if ($(window).width() >= 768) {
+      let checkHeight = [];
+      checkHeight.push($(".npNode ul").eq(0).height());
+      $(".npNode li.active")
+        .children("ul")
+        .each(function () {
+          checkHeight.push($(this).height());
+        });
+
+      const maxHeight = Math.max(...checkHeight);
+      $(".npNode").css("height", `${maxHeight}px`);
+      $(".npNode ul").css("bottom", "0");
+      initializeMenu();  // 大於等於768時執行 initializeMenu
+    } else {
+      $(".npNode").attr("style", "");
+      $(".npNode ul").attr("style", "");
+      initializeToggleBehavior();  // 小於768時執行簡單的展開/收合
+    }
+  }
+
+  // 首次載入時執行
+  checkWindowWidth();
+
+  // 當視窗大小改變時重新檢查
+  $(window).resize(function () {
+    checkWindowWidth();
   });
 });
 
@@ -627,36 +728,23 @@ $(function () {
 
 
 
-// $(function () {
-//   // 為所有含有子選單的 <li> 加上 hasChild class
-//   $(".npNode ul li").has("ul").addClass("hasChild");
 
-//   // 點擊展開選單
-//   $(".npNode .hasChild > a").on("click", function (e) {
-//     e.preventDefault();  // 阻止預設行為，以確保單擊即可展開
 
-//     const $li = $(this).parent("li");
 
-//     // 隱藏同層其他選單並移除 active 狀態
-//     $li.siblings().removeClass("active").find("ul").hide();
-//     $li.siblings().find("li").removeClass("active");  // 清除子選單的 active 狀態
 
-//     // 切換當前選單的顯示狀態
-//     $li.toggleClass("active");
-//     $li.children("ul").toggle();  // 單擊展開或收起子選單
 
-//     // 計算所有顯示中的 <ul> 的最大高度
-//     let maxHeight = 0;
-//     $(".npNode ul").each(function () {
-//       if ($(this).is(":visible")) {
-//         maxHeight = Math.max(maxHeight, $(this).outerHeight());
-//       }
-//     });
 
-//     // 將最大高度設置到 .npNode 上
-//     $(".npNode").css("height", `${maxHeight}px`);
-//   });
-// });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
