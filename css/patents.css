@@ -1574,7 +1574,7 @@ a.goCenter:hover, a.goCenter:focus {
   color: #b01fe8;
 }
 .no-js noscript a:hover, .no-js noscript a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 .no-js .mpSlider .img-container {
   display: none;
@@ -1767,7 +1767,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 
@@ -1841,11 +1841,11 @@ kbd kbd {
   color: #333;
 }
 .font_size ul li a:hover, .font_size ul li a:focus {
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
   color: #fff;
 }
 .font_size ul li a.active {
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
   color: #fff;
 }
 .font_size ul li a.active:hover, .font_size ul li a.active:focus {
@@ -2321,7 +2321,7 @@ kbd kbd {
   text-decoration: none;
 }
 .breadcrumb a:hover, .breadcrumb a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 
@@ -2504,8 +2504,8 @@ img.loaded {
   right: 0;
 }
 .img-container a:focus-visible:before {
-  -webkit-box-shadow: 0 0px 0px 2px rgb(142, 61, 255) inset;
-          box-shadow: 0 0px 0px 2px rgb(142, 61, 255) inset;
+  -webkit-box-shadow: 0 0px 0px 2px #6c1bb8 inset;
+          box-shadow: 0 0px 0px 2px #6c1bb8 inset;
 }
 .img-container img {
   position: absolute;
@@ -3085,7 +3085,7 @@ em[tooltip] {
   text-decoration: none;
 }
 em[tooltip]:hover, em[tooltip]:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 
@@ -3361,7 +3361,7 @@ div.tag ul li a {
   background: #fff;
 }
 div.tag ul li a:hover, div.tag ul li a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 div.tag ul li a::before {
@@ -3639,7 +3639,7 @@ div.tag ul li a.active:hover {
   color: #292929;
 }
 .header .navigation .navlist li a:hover {
-  color: #b01fe8;
+  color: #c961fc;
 }
 .header.sticky {
   position: fixed;
@@ -3898,7 +3898,7 @@ div.tag ul li a.active:hover {
   color: #292929;
 }
 .menu .container > ul > li:hover > a {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 .menu ul li {
   position: relative;
@@ -3927,10 +3927,9 @@ div.tag ul li a.active:hover {
 .menu ul li ul li a {
   padding: 0.6em 1.2em;
   color: #fff;
-  font-weight: bold;
 }
 .menu ul li ul li a:hover, .menu ul li ul li a:focus {
-  color: rgb(142, 61, 255);
+  color: #d98eff;
 }
 .menu ul li ul li.hasChild > ul {
   z-index: 999;
@@ -4369,7 +4368,7 @@ div.tag ul li a.active:hover {
 }
 .sidebar .navigation ul li a:before {
   position: absolute;
-  top: 0.75em;
+  top: 50%;
   left: 0;
   content: "";
   width: 0;
@@ -4523,10 +4522,10 @@ div.tag ul li a.active:hover {
   margin-bottom: 0.2em;
 }
 .megamenu > ul > li:hover > a {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 .megamenu > ul > li:hover > a:after {
-  border: 2px solid rgb(142, 61, 255);
+  border: 2px solid #6c1bb8;
   border-bottom: none;
   border-left: none;
 }
@@ -4570,13 +4569,13 @@ div.tag ul li a.active:hover {
 }
 .megamenu ul li ul li a {
   padding: 0.6em 1.2em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .megamenu ul li ul li a:hover, .megamenu ul li ul li a:focus {
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
 }
 .megamenu ul li ul li ul {
   margin: 0 0 20px;
@@ -4680,7 +4679,7 @@ div.tag ul li a.active:hover {
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: 3em;
   background: #b01fe8;
@@ -4694,7 +4693,7 @@ div.tag ul li a.active:hover {
   -webkit-box-shadow: 0px 0px 4px RGBA(0, 0, 0, 0.4);
           box-shadow: 0px 0px 4px RGBA(0, 0, 0, 0.4);
   margin-bottom: 1em;
-  background: #CCC;
+  background: #ccc;
 }
 .sidebar .m_area .megamenu a {
   display: block;
@@ -4722,13 +4721,13 @@ div.tag ul li a.active:hover {
   padding: 0.5em 1em;
   min-height: 2em;
   line-height: 2em;
-  background: #FFF;
-  border-bottom: 1px solid #CCC;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 .sidebar .m_area .megamenu ul li.hasChild > a {
   padding: 0.5em 1em;
   color: #222;
-  background: #FFF;
+  background: #fff;
   padding-right: 36px;
   position: relative;
 }
@@ -4773,7 +4772,7 @@ div.tag ul li a.active:hover {
 .sidebar .m_area .megamenu ul li ul li li a {
   background: rgba(0, 0, 0, 0.15) !important;
   padding: 0.5em 1em 0.5em 4em !important;
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #bbb;
 }
 .sidebar .m_area .megamenu ul li ul li li a:hover, .sidebar .m_area .megamenu ul li ul li li a:focus {
   background: rgba(0, 0, 0, 0.25) !important;
@@ -4813,7 +4812,7 @@ div.tag ul li a.active:hover {
   line-height: 2em;
   padding: 0.5em 1em;
   font-size: 0.938em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -4825,7 +4824,7 @@ div.tag ul li a.active:hover {
   border-top: none;
 }
 .sidebar .navigation ul li a:hover, .sidebar .navigation ul li a:focus {
-  background: #6e0f92;
+  background: #9014c0;
 }
 .sidebar .navigation .language {
   position: relative;
@@ -5021,7 +5020,7 @@ footer a {
   color: #fff;
 }
 footer a:hover, footer a:focus {
-  color: #a362fe;
+  color: #d98eff;
 }
 footer .footer_info {
   -webkit-box-flex: 1;
@@ -5106,8 +5105,8 @@ footer .footer_icon a:focus:after {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-box-shadow: 0px 0px 0px 1px rgb(142, 61, 255) inset;
-          box-shadow: 0px 0px 0px 1px rgb(142, 61, 255) inset;
+  -webkit-box-shadow: 0px 0px 0px 1px #6c1bb8 inset;
+          box-shadow: 0px 0px 0px 1px #6c1bb8 inset;
   z-index: 99;
 }
 footer .footer_icon img {
@@ -5175,7 +5174,7 @@ footer .footer_icon img {
   outline: none;
 }
 .fatfooter .btn-fatfooter:hover::before, .fatfooter .btn-fatfooter:focus::before {
-  border: 2px solid #a362fe;
+  border: 2px solid #c961fc;
   border-left: none;
   border-bottom: none;
 }
@@ -5238,7 +5237,7 @@ footer .footer_icon img {
   padding: 0.5em 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #a362fe;
+  color: #c961fc;
 }
 .fatfooter nav > ul > li > ul {
   margin: 0;
@@ -5280,7 +5279,7 @@ footer .footer_icon img {
   color: #fff;
 }
 .fatfooter nav > ul > li > ul > li > a:hover, .fatfooter nav > ul > li > ul > li > a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 @media screen and (max-width: 991px) {
@@ -5289,7 +5288,7 @@ footer .footer_icon img {
   }
 }
 .fatfooter nav > ul > li > ul > li > a:hover {
-  color: #a362fe;
+  color: #d98eff;
 }
 .fatfooter nav > ul > li > ul > ul {
   display: none;
@@ -7892,7 +7891,7 @@ table.table_sprite tr:nth-child(even) {
   text-decoration: none;
 }
 .sub_menu li a:hover, .sub_menu li a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 .sub_menu li a .num {
@@ -8018,7 +8017,7 @@ table.table_sprite tr:nth-child(even) {
   position: relative;
 }
 .thumbnail a:hover, .thumbnail a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 .thumbnail a:focus-visible:before {
@@ -8421,7 +8420,7 @@ table.table_sprite tr:nth-child(even) {
 .slick-dots li.slick-active button {
   opacity: 1;
   /* 點 active 的顏色 */
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
 }
 .slick-dots li.slick-active button::before {
   display: none;
@@ -8666,8 +8665,8 @@ table.table_sprite tr:nth-child(even) {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .lightbox_slider_block .cppic_slider {
   position: relative;
@@ -8910,8 +8909,8 @@ table.table_sprite tr:nth-child(even) {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .Syncing_slider .slick-slide {
   position: relative;
@@ -9085,8 +9084,8 @@ table.table_sprite tr:nth-child(even) {
   vertical-align: middle;
 }
 .function_panel .advSearch button.active {
-  background: #8e3dff;
-  border: 1px solid #8e3dff;
+  background: #6c1bb8;
+  border: 1px solid #6c1bb8;
   color: #fff;
 }
 .function_panel .advSearch button.active::before {
@@ -9173,8 +9172,8 @@ div.function ul li a {
 div.function ul li button:hover, div.function ul li button:focus,
 div.function ul li a:hover,
 div.function ul li a:focus {
-  background: #8e3dff;
-  border-color: #8e3dff;
+  background: #6c1bb8;
+  border-color: #6c1bb8;
 }
 div.function ul li.icon_back a:before {
   background: url(../images/basic/icon_back.svg) no-repeat center center;
@@ -9225,7 +9224,7 @@ div.function ul li.icon_forward a:before {
   position: relative;
 }
 .function_panel .function ul li a:hover, .function_panel .function ul li a:focus {
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
   color: #fff;
 }
 .function_panel .function ul li a:hover:before, .function_panel .function ul li a:focus:before {
@@ -9322,7 +9321,7 @@ div.function ul li.icon_forward a:before {
   background-size: 24px !important;
 }
 .function_panel .share a.shareButton:hover, .function_panel .share a.shareButton:focus {
-  background: rgb(142, 61, 255);
+  background: #6c1bb8;
 }
 .function_panel .share a.shareButton:hover:before, .function_panel .share a.shareButton:focus:before {
   -webkit-filter: invert(100%);
@@ -9824,8 +9823,8 @@ body.noscroll {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 
 .innerpage > .container {
@@ -10365,8 +10364,8 @@ body.noscroll {
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .innerpage .left_block {
   -webkit-box-flex: 0;
@@ -10424,7 +10423,8 @@ body.noscroll {
 span.file_doc a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10436,7 +10436,8 @@ span.file_doc a:hover, span.file_doc a:focus {
 span.file_docx a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10448,7 +10449,8 @@ span.file_docx a:hover, span.file_docx a:focus {
 span.file_odt a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10460,7 +10462,8 @@ span.file_odt a:hover, span.file_odt a:focus {
 span.file_odf a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10472,7 +10475,8 @@ span.file_odf a:hover, span.file_odf a:focus {
 span.file_xls a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10484,7 +10488,8 @@ span.file_xls a:hover, span.file_xls a:focus {
 span.file_xlsx a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10496,7 +10501,8 @@ span.file_xlsx a:hover, span.file_xlsx a:focus {
 span.file_csv a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10508,7 +10514,8 @@ span.file_csv a:hover, span.file_csv a:focus {
 span.file_ods a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10520,7 +10527,8 @@ span.file_ods a:hover, span.file_ods a:focus {
 span.file_ppt a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10532,7 +10540,8 @@ span.file_ppt a:hover, span.file_ppt a:focus {
 span.file_pptx a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10544,7 +10553,8 @@ span.file_pptx a:hover, span.file_pptx a:focus {
 span.file_odp a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10556,7 +10566,8 @@ span.file_odp a:hover, span.file_odp a:focus {
 span.file_zip a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10568,7 +10579,8 @@ span.file_zip a:hover, span.file_zip a:focus {
 span.file_txt a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10580,7 +10592,8 @@ span.file_txt a:hover, span.file_txt a:focus {
 span.file_mov a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10592,7 +10605,8 @@ span.file_mov a:hover, span.file_mov a:focus {
 span.file_mp3 a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10604,7 +10618,8 @@ span.file_mp3 a:hover, span.file_mp3 a:focus {
 span.file_jpg a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10616,7 +10631,8 @@ span.file_jpg a:hover, span.file_jpg a:focus {
 span.file_wmv a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10628,7 +10644,8 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 span.file_mp4 a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10640,7 +10657,8 @@ span.file_mp4 a:hover, span.file_mp4 a:focus {
 span.file_pdf a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10652,7 +10670,8 @@ span.file_pdf a:hover, span.file_pdf a:focus {
 span.file_other a {
   color: #fff;
   font-weight: bold;
-  padding: 0.2em 0.8em;
+  font-size: 0.875em;
+  padding: 0.1em 0.6em;
   border-radius: 3px;
   white-space: nowrap;
   display: inline-block;
@@ -10798,11 +10817,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
             box-sizing: border-box;
   }
   .header .menu .container > ul > li > a {
-    color: #b01fe8;
+    color: #c961fc;
     font-size: 1.25rem;
   }
   .header .menu .container > ul > li:hover > a {
-    color: #b01fe8;
+    color: #c961fc;
   }
   .header .menu .container > ul ul {
     display: block !important;
@@ -11346,8 +11365,8 @@ h2.sectionTitle::after {
   border-radius: 0 4px 0 0;
 }
 .news .tabSet .tabItems .tabBtn.active {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .news .tabSet .tabItems .tabBtn.active:hover, .news .tabSet .tabItems .tabBtn.active:focus-visible {
   background: #6c1bb8;
@@ -11382,8 +11401,8 @@ h2.sectionTitle::after {
   background: #d1d1d1;
 }
 .news .tabSet .tabContentGroup .tabContent .modeBBtn.active {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .news .content {
   padding: 34px 40px;
@@ -11503,8 +11522,8 @@ h2.sectionTitle::after {
   max-width: 138px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
   border-radius: 0 8px 0 0;
 }
 @media screen and (max-width: 767px) {
@@ -11518,8 +11537,8 @@ h2.sectionTitle::after {
 }
 @media screen and (max-width: 575px) {
   .news .content .newsPic a time {
-    background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-    background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+    background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
     color: #fff;
     padding: 6px 24px;
     max-width: 138px;
@@ -11652,8 +11671,8 @@ h2.sectionTitle::after {
   transition: all 0.3s ease-out;
 }
 .news .content a.more:hover, .news .content a.more:focus-visible {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -11804,7 +11823,8 @@ h2.sectionTitle::after {
   transition: all 0.3s ease-out;
 }
 .column .columnContent .content .topText .more:hover, .column .columnContent .content .topText .more:focus-visible {
-  background: #6c1bb8;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
   color: #fff;
 }
 .column .columnContent .content .topText .more:hover::after, .column .columnContent .content .topText .more:focus-visible::after {
@@ -11860,6 +11880,8 @@ h2.sectionTitle::after {
   border-radius: 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .column .columnContent .content .bottomSlider a:hover, .column .columnContent .content .bottomSlider a:focus-visible {
   background: #6c1bb8;
@@ -12168,6 +12190,7 @@ h2.sectionTitle::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 100%;
 }
 .resource .sectionTitle::before {
   content: "";
@@ -12303,7 +12326,7 @@ h2.sectionTitle::after {
   transition: all 0.3s ease-out;
 }
 .resource .content .block .more:hover, .resource .content .block .more:focus-visible {
-  background: #6c1bb8;
+  background: #292929;
   color: #fff;
 }
 .resource .content .block .more:hover::after, .resource .content .block .more:focus-visible::after {
@@ -12788,7 +12811,7 @@ h2.title {
   text-decoration: none;
 }
 .cp a:hover, .cp a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 
@@ -12811,8 +12834,8 @@ h2.title {
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .cpLetters caption {
   display: none;
@@ -12882,8 +12905,8 @@ h2.title {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .file_download ul {
   list-style-type: none;
@@ -12949,8 +12972,8 @@ h2.title {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .web_link ol,
 .web_link ul {
@@ -12982,7 +13005,7 @@ h2.title {
   text-decoration: none;
 }
 .web_link li a:hover, .web_link li a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 
@@ -12991,7 +13014,7 @@ h2.title {
   text-decoration: none;
 }
 .lp table td a:hover, .lp table td a:focus {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
   cursor: pointer;
 }
 .lp table td.date {
@@ -13034,7 +13057,7 @@ h2.title {
   overflow: hidden;
 }
 .lp .list > ul > li > a:hover, .lp .list > ol > li > a:hover {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 .lp .list > ul > li > a .num, .lp .list > ol > li > a .num {
   width: 3em;
@@ -13332,7 +13355,7 @@ h2.title {
   margin: 0.5em 0;
 }
 .leftblock_list ul li a:hover {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 
 .leftblock_nodemenu {
@@ -13372,7 +13395,7 @@ h2.title {
   color: #333;
 }
 .leftblock_nodemenu ul li a:hover {
-  color: rgb(142, 61, 255);
+  color: #6c1bb8;
 }
 
 @media print {
@@ -13600,8 +13623,8 @@ h2.title {
   border-radius: 0 4px 0 0;
 }
 .patents .patentsSearch .tabSet .tabItems .tabBtn.active {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .patents .patentsSearch .tabSet .tabItems .tabBtn.active:hover, .patents .patentsSearch .tabSet .tabItems .tabBtn.active:focus-visible {
   background: #6c1bb8;
@@ -13657,8 +13680,8 @@ h2.title {
   background: #d1d1d1;
 }
 .patents .patentsSearch .tabSet .tabContentGroup .tabContent .modeBBtn.active {
-  background: -webkit-gradient(linear, left top, right top, from(rgb(162, 32, 230)), to(rgb(193, 26, 235)));
-  background: linear-gradient(90deg, rgb(162, 32, 230) 0%, rgb(193, 26, 235) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(138, 10, 207)), to(rgb(193, 26, 235)));
+  background: linear-gradient(90deg, rgb(138, 10, 207) 0%, rgb(193, 26, 235) 100%);
 }
 .patents .info {
   font-size: 0.938em;

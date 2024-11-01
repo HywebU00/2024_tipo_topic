@@ -2,10 +2,10 @@
 // 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #b01fe8; //主色
-$secondaryColor: #6c1bb8; //輔色
+$primaryColor: #19b0cb; //主色
+$secondaryColor: #008477; //輔色
 $lightColor: #fec003; //點綴
-$linkColor: #6c1bb8; //連結
+$linkColor: #8e3dff; //連結
 $importantColor: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #0066cc;
@@ -20,11 +20,11 @@ $color-hr: #666; //hr顏色
 $color-word: #292929; //一般字的顏色
 $btn-word: #292929; //按鈕字的顏色
 // 連結顏色
-$aColor: #b01fe8;
-$aHover: #6c1bb8;
+$aColor: #19b0cb;
+$aHover: rgb(142, 61, 255);
 $aFocus: #ff0088;
 // 表單focus顏色
-$form-focus: #b01fe8; //表單
+$form-focus: #19b0cb; //表單
 $form-btn: #0066cc; //表單
 //------------------------------------------------------字型--------//
 // 字型設定
@@ -50,43 +50,43 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99); //動態預設
 //共用設定
 $logo: url(../images/mp/patents/logo.png);
 $fontColor: #292929;
-$menuColor: #c961fc;
-$menuHover: #c961fc; //menu滑過顏色
+$menuColor: #19b0cb;
+$menuHover: #19b0cb; //menu滑過顏色
 $menuHover2: #d98eff; //展開menu滑過顏色
-$subMemuColor: #b01fe8;
-$subMemuHover: #6c1bb8;
-$advSearchColor: #6c1bb8;
+$subMemuColor: #19b0cb;
+$subMemuHover: #008477;
+$advSearchColor: #8e3dff;
 
 $fatfooterBgColor: #333; //fatFooter 底色
 $fatfooterNum: 7; //fatFooter數量
-$fatfooterColor: #c961fc; //fatFooter箭頭hover顏色 第一層顏色
-$fatfooterHover: #d98eff; //fatFooter箭頭hover顏色 第二層顏色
-$footerColor: #d98eff; //footer字hover
+$fatfooterColor: #a362fe; //fatFooter箭頭hover顏色 第一層顏色
+$fatfooterHover: #a362fe; //fatFooter箭頭hover顏色 第二層顏色
+$footerColor: #a362fe; //footer字hover
 
 //mp區域
-$sectionTitle: #6c1bb8; //section標題
-$mpSliderPage: #6c1bb8; //mpSlider頁碼底色
+$sectionTitle: #008477; //section標題
+$mpSliderPage: #008477; //mpSlider頁碼底色
 
-$quickLink: #b01fe8; //快速連結
-$quickLinkHover: #6c1bb8; //快速連結hover
+$quickLink: #19b0cb; //快速連結
+$quickLinkHover: #008477; //快速連結hover
 
 $tabBtn: #d1d1d1; //頁籤
 $tabBtnActive: linear-gradient(
   90deg,
-  rgb(138, 10, 207) 0%,
+  rgba(162, 32, 230, 1) 0%,
   rgba(193, 26, 235, 1) 100%
 );
-$tabBtnHover: #6c1bb8;
+$tabBtnHover: #008477;
 
 $timeColor: #4c1795; //news時間顏色
 
-$columnMore: $tabBtnActive; //兩欄more顏色
+$columnMore: #008477; //兩欄more顏色
 
-$judgmentColor: #6c1bb8; //近期重要判決icon底色
-$judgmentColor2: #b01fe8; //近期重要判決文字hover
+$judgmentColor: #008477; //近期重要判決icon底色
+$judgmentColor2: #19b0cb; //近期重要判決文字hover
 
 $resourceBg: url(../images/mp/patents/source_bg.jpg);
-$resourceMore: $fontColor;
+$resourceMore: #008477;
 
 //專利版本
 $th1: #5d0981;
@@ -97,7 +97,7 @@ $tRB: #9c57ba;
 $ipcTr1: #79239e;
 $ipcTr2: #9c57ba;
 
-$faqColor: #6c1bb8;
+$faqColor: #008477;
 
 $innerBannerLine: #ff0088;
 $innerBanner: url(../images/mp/patents/innerBanner.png);

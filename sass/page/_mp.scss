@@ -93,9 +93,6 @@
             //第三層
             ul {
               padding: 10px 0;
-              // background: rgba(255, 255, 255, 0.1);
-              li {
-              }
               a {
                 padding-left: 10px;
                 position: relative;
@@ -953,6 +950,7 @@ h2.sectionTitle {
           min-width: 160px;
           border-radius: 3px;
           box-sizing: border-box;
+          transition: all 0.5s ease-out;
           &:hover,
           &:focus-visible {
             background: $quickLinkHover;
@@ -1203,6 +1201,7 @@ h2.sectionTitle {
   .sectionTitle {
     color: #fff;
     justify-content: center;
+    line-height: 100%;
     &::before {
       content: "";
       width: 42px;

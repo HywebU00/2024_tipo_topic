@@ -71,7 +71,6 @@
       }
     }
   }
-
   ul {
     li {
       position: relative;
@@ -102,11 +101,9 @@
           a {
             padding: 0.6em 1.2em;
             color: #fff;
-            font-weight: bold;
-
             &:hover,
             &:focus {
-              color: $aHover;
+              color: $menuHover2;
             }
           }
         }

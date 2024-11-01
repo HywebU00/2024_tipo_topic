@@ -55,7 +55,6 @@ $menuItems: 15;
     box-sizing: border-box;
 
     &.open {
-
       .menu,
       .megamenu {
         & > ul {
@@ -124,7 +123,7 @@ $menuItems: 15;
               color: #fff;
 
               &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 right: 1em;
                 top: 1.25em;
@@ -139,7 +138,6 @@ $menuItems: 15;
               }
             }
           }
-
 
           ul {
             display: none;
@@ -160,7 +158,8 @@ $menuItems: 15;
                 border: none;
 
                 &:hover,
-                &:focus {}
+                &:focus {
+                }
               }
 
               &.hasChild {
@@ -178,7 +177,8 @@ $menuItems: 15;
                   padding: 0.5em 1em 0.5em 4em !important;
 
                   &:hover,
-                  &:focus {}
+                  &:focus {
+                  }
 
                   &:after {
                     display: none;
@@ -229,9 +229,9 @@ $menuItems: 15;
 
           &:before {
             position: absolute;
-            top: 0.75em;
+            top: 50%;
             left: 0;
-            content: '';
+            content: "";
             width: 0;
             height: 0;
             border-style: solid;
@@ -320,7 +320,7 @@ $menuItems: 15;
       width: 15px;
       height: 15px;
       border: 3px solid #eee;
-      content: '';
+      content: "";
       top: 15px;
       right: 10px;
       transform: rotate(45deg);
