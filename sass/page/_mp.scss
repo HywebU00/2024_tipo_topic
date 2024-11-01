@@ -955,6 +955,10 @@ h2.sectionTitle {
           &:focus-visible {
             background: $quickLinkHover;
           }
+          &:focus-visible {
+            box-shadow: 0 0 0 2px $aFocus inset;
+            outline: 0;
+          }
         }
         .slick-prev,
         .slick-next {
@@ -998,6 +1002,7 @@ h2.sectionTitle {
     .columnContent {
       .sectionTitle {
         padding-left: 13%;
+
         @include screen("tablet") {
           padding-left: 40px;
         }
@@ -1050,6 +1055,7 @@ h2.sectionTitle {
   }
   .sectionTitle {
     justify-content: center;
+    line-height: 100%;
     &::before {
       content: "";
       width: 42px;

@@ -53,8 +53,8 @@ $fontColor: #292929;
 $menuColor: #c961fc;
 $menuHover: #c961fc; //menu滑過顏色
 $menuHover2: #d98eff; //展開menu滑過顏色
-$subMemuColor: #b01fe8;
-$subMemuHover: #6c1bb8;
+$subMenuColor: #b01fe8;
+$subMenuHover: #6c1bb8;
 $advSearchColor: #6c1bb8;
 
 $fatfooterBgColor: #333; //fatFooter 底色
@@ -71,11 +71,7 @@ $quickLink: #b01fe8; //快速連結
 $quickLinkHover: #6c1bb8; //快速連結hover
 
 $tabBtn: #d1d1d1; //頁籤
-$tabBtnActive: linear-gradient(
-  90deg,
-  rgb(138, 10, 207) 0%,
-  rgba(193, 26, 235, 1) 100%
-);
+$tabBtnActive: linear-gradient(90deg, #8a0acf 0%, #c11aeb 100%);
 $tabBtnHover: #6c1bb8;
 
 $timeColor: #4c1795; //news時間顏色

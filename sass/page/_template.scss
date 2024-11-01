@@ -226,7 +226,7 @@ body {
     //           transition: all 0.5s;
     //         }
     //         &.active {
-    //           background: $subMemuHover;
+    //           background: $subMenuHover;
     //           color: #fff;
     //           &::after {
     //             border-top: 2px solid #fff;
@@ -291,7 +291,7 @@ body {
     //           }
     //           &:hover {
     //             @include screen("mobile") {
-    //               color: $subMemuHover;
+    //               color: $subMenuHover;
     //             }
     //             &::after {
     //               width: 100%;
@@ -299,12 +299,12 @@ body {
     //               position: absolute;
     //               left: 0;
     //               bottom: 0;
-    //               background: $subMemuColor;
+    //               background: $subMenuColor;
     //             }
     //           }
     //           &.active {
     //             @include screen("mobile") {
-    //               color: $subMemuHover;
+    //               color: $subMenuHover;
     //             }
     //             &::after {
     //               content: "";
@@ -313,10 +313,10 @@ body {
     //               position: absolute;
     //               left: 0;
     //               bottom: 0;
-    //               background: $subMemuColor;
+    //               background: $subMenuColor;
     //             }
     //             &:hover {
-    //               color: $subMemuHover;
+    //               color: $subMenuHover;
     //             }
     //           }
     //         }
@@ -363,7 +363,7 @@ body {
     //           transition: all 0.5s;
     //         }
     //         &.active {
-    //           background: $subMemuColor;
+    //           background: $subMenuColor;
     //           color: #fff;
     //           &::after {
     //             border-top: 2px solid #fff;
@@ -415,25 +415,25 @@ body {
     //           }
     //           &:hover {
     //             color: #fff;
-    //             background: $subMemuColor;
+    //             background: $subMenuColor;
     //             border-radius: 4px;
     //             @include screen("mobile") {
-    //               color: $subMemuColor;
+    //               color: $subMenuColor;
     //               background: transparent;
     //             }
     //           }
     //           &.active {
     //             color: #fff;
-    //             background: $subMemuHover;
+    //             background: $subMenuHover;
     //             border-radius: 4px;
     //             @include screen("mobile") {
-    //               color: $subMemuColor;
+    //               color: $subMenuColor;
     //               background: transparent;
     //             }
     //             &:hover {
-    //               background: $subMemuColor;
+    //               background: $subMenuColor;
     //               @include screen("mobile") {
-    //                 color: $subMemuColor;
+    //                 color: $subMenuColor;
     //                 background: transparent;
     //               }
     //             }
@@ -477,7 +477,7 @@ body {
         @include screen("mobile") {
           display: block;
           &.openBtn {
-            background: $subMemuHover;
+            background: $subMenuHover;
             color: #fff;
             &::after {
               border-top: 2px solid #fff;
@@ -581,14 +581,14 @@ body {
               }
             }
             &:hover {
-              color: #6c1bb8;
+              color: $secondaryColor;
               &::after {
                 width: 100%;
                 height: 4px;
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                background: #b01fe8;
+                background: $primaryColor;
               }
             }
           }
@@ -603,7 +603,7 @@ body {
             margin-top: 10px;
             @include screen("mobile") {
               &.openBtn {
-                background: $subMemuColor;
+                background: $subMenuColor;
                 color: #fff;
                 &::after {
                   border-top: 2px solid #fff;
@@ -616,7 +616,7 @@ body {
           }
           &.active {
             & > a {
-              color: #6c1bb8;
+              color: $secondaryColor;
 
               &::after {
                 content: "";
@@ -625,7 +625,7 @@ body {
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                background: #b01fe8;
+                background: $primaryColor;
               }
             }
 
@@ -670,10 +670,10 @@ body {
                 }
                 &:hover {
                   color: #fff;
-                  background: $subMemuColor;
+                  background: $subMenuColor;
                   border-radius: 4px;
                   @include screen("mobile") {
-                    color: $subMemuColor;
+                    color: $subMenuColor;
                     background: transparent;
                   }
                 }
@@ -681,16 +681,16 @@ body {
               &.active2 {
                 a {
                   color: #fff;
-                  background: $subMemuHover;
+                  background: $subMenuHover;
                   border-radius: 4px;
                   @include screen("mobile") {
-                    color: $subMemuColor;
+                    color: $subMenuColor;
                     background: transparent;
                   }
                   &:hover {
-                    background: $subMemuColor;
+                    background: $subMenuColor;
                     @include screen("mobile") {
-                      color: $subMemuColor;
+                      color: $subMenuColor;
                       background: transparent;
                     }
                   }
@@ -824,17 +824,17 @@ body {
     //               transition: 0.5s all;
     //               &:hover {
     //                 color: #fff;
-    //                 background: $subMemuColor;
+    //                 background: $subMenuColor;
     //                 border-radius: 4px;
     //               }
     //             }
     //             &.active {
     //               a {
     //                 color: #fff;
-    //                 background: $subMemuHover;
+    //                 background: $subMenuHover;
     //                 border-radius: 4px;
     //                 &:hover {
-    //                   background: $subMemuColor;
+    //                   background: $subMenuColor;
     //                 }
     //               }
     //             }

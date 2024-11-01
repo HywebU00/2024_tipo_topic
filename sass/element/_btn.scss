@@ -19,7 +19,7 @@ $btn-radius: 0.2em;
   // @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
   &:hover {
     background: darken($btn-bg, 10); // Old browsers
-    border: 1px solid darken($btn-bg, 20);
+    border: 1px solid darken($btn-bg, 10);
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -27,7 +27,7 @@ $btn-radius: 0.2em;
   }
   &:focus-visible {
     background: darken($btn-bg, 10); // Old browsers
-    border: 1px solid darken($btn-bg, 20);
+    border: 1px solid darken($btn-bg, 10);
     cursor: pointer;
     color: #fff;
     outline: none;

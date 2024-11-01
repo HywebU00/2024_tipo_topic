@@ -26,17 +26,20 @@
     &:focus {
       color: #fff;
       background: $primaryColor;
-      border: 1px solid darken($color: $primaryColor, $amount: 10);
+      //   border: 1px solid darken($color: $primaryColor, $amount: 10);
+      border: 1px solid $primaryColor;
       box-shadow: none;
     }
     &.active {
       color: #fff;
       background: $secondaryColor;
-      border: 1px solid darken($color: $secondaryColor, $amount: 10);
+      //   border: 1px solid darken($color: $secondaryColor, $amount: 10);
+      border: 1px solid $secondaryColor;
       &:hover {
         background: $primaryColor;
         color: #fff;
-        border: 1px solid darken($color: $primaryColor, $amount: 10);
+        // border: 1px solid darken($color: $primaryColor, $amount: 10);
+        border: 1px solid $primaryColor;
       }
     }
     span {

@@ -162,7 +162,9 @@
           color: #fff;
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           border-radius: 2px;
-          @include btn_setting($form-focus, #fff);
+          // @include btn_setting($form-focus, #fff);
+          background: $primaryColor;
+          border: 1px solid $primaryColor;
           &:hover {
             background: darken($primaryColor, 10);
           }
@@ -249,24 +251,18 @@
         th,
         td {
           background: $th2;
-          background: -webkit-linear-gradient(top, $th2, $th2);
-          background: linear-gradient(to bottom, $th2, $th2);
         }
       }
       &.lv3 {
         th,
         td {
           background: $th3;
-          background: -webkit-linear-gradient(top, $th3, $th3);
-          background: linear-gradient(to bottom, $th3, $th3);
         }
       }
       &.lv_head {
         th,
         td {
           background: #f5f5f5;
-          background: -webkit-linear-gradient(top, #f5f5f5, #f5f5f5);
-          background: linear-gradient(to bottom, #f5f5f5, #f5f5f5);
         }
       }
       td {

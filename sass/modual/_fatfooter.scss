@@ -97,7 +97,11 @@
           padding: 0.5em 0px;
           box-sizing: border-box;
           color: $fatfooterColor;
-          &:hover {
+          &:hover,
+          &:focus,
+          &:focus-visible {
+            color: $fatfooterColor;
+            text-decoration: underline;
           }
         }
         > ul {
@@ -129,7 +133,7 @@
             }
             > a {
               display: block;
-              @include aSetting_nocolor;
+
               font-weight: normal;
               text-align: left;
               font-size: 1rem;
@@ -140,7 +144,9 @@
               @include screen("tablet") {
                 display: inline-block;
               }
-              &:hover {
+              &:hover,
+              &:focus,
+              &:focus-visible {
                 color: $fatfooterHover;
               }
             }
