@@ -9730,6 +9730,7 @@ div.function ul li.icon_forward a:before {
   background: #f1f1f1;
   border-radius: 25px;
   color: #666;
+  font-size: 0.875em;
 }
 .faq .accordion ul li.accordionList .accordionBtn .accordionState::after {
   content: "";
