@@ -642,56 +642,7 @@ $(document).ready(function()  {
   $(window).resize(checkWindowWidth);
 });
 
-
 //nodeMemu
-// $(function () {
-// 	$(".nodeMemu ul").find("li").has("ul").addClass("hasChild");
-
-// 	$(".nodeMemu .hasChild > a").on("click", function (e) {
-// 		e.preventDefault();
-
-// 		// 檢查螢幕寬度
-// 		if ($(window).width() >= 768) {
-// 			// 大於等於 768px 的行為
-// 			$(this).parent("li").siblings().removeClass("active");
-// 			$(this).parent("li").toggleClass("active");
-// 			checkHeight();
-// 		} else {
-// 			// 小於 768px 的行為，只切換 active 類別
-// 			$(this).parent("li").siblings().removeClass("active");
-// 			$(this).parent("li").toggleClass("active");
-// 		}
-// 	});
-
-// 	$(window).resize(function () {
-// 		if ($(window).width() >= 768) {
-// 			checkHeight();
-// 		} else {
-// 			// 重置樣式
-// 			$(".nodeMemu").css("height", "");
-// 			$(".nodeMemu ul").css("top", "");
-// 		}
-// 	});
-
-// 	function checkHeight() {
-// 		if ($(window).width() >= 768) {
-// 			let activeUl = $(".nodeMemu > ul > li.active").children("ul");
-// 			let nextHeight = activeUl.length ? activeUl.outerHeight() : 0;
-// 			let parentHeight = $(".node3").outerHeight();
-
-// 			// 設定 .nodeMemu 的高度
-// 			$(".nodeMemu").css("height", `${parentHeight + nextHeight + 20}px`);
-
-// 			// 設定 active 的子 ul 的 top 位置
-// 			$(".nodeMemu li.active").children("ul").css("top", `${parentHeight + 16}px`);
-// 		}
-// 	}
-
-// 	// 頁面加載時檢查
-// 	if ($(window).width() >= 768) {
-// 		checkHeight();
-// 	}
-// });
 $(function () {
   $(".nodeMenu ul").find("li").has("ul").addClass("hasChild");
   $(".nodeMenu .hasChild ul").before(
@@ -707,7 +658,6 @@ $(function () {
     $(this).parent("li").siblings().find("ul").removeClass("active");
     $(this).parent("li").toggleClass("active");
     $(this).siblings("ul").toggleClass("active");
-    $(this).parents("ul");
     checkHeight();
   });
 
@@ -729,12 +679,15 @@ $(function () {
     checkHeight();
   });
 
+  // 在初次加載時調用 checkHeight
+  checkHeight();
+
   function checkHeight(e) {
     const windowWidth = $(window).width();
-    let nextHeight = $(".nodeMenu li.active").children("ul").outerHeight();
-    let parentHeight = $(".nodeMenu li.active").parents("ul").outerHeight();
-    let m3BtnHeight = $(".nodeMenu .m3Btn").outerHeight();
-    let m4BtnHeight = $(".nodeMenu li.active .m4Btn").outerHeight();
+    let nextHeight = $(".nodeMenu li.active").children("ul").outerHeight() || 0;
+    let parentHeight = $(".nodeMenu li.active").parents("ul").outerHeight() || 0;
+    let m3BtnHeight = $(".nodeMenu .m3Btn").outerHeight() || 0;
+    let m4BtnHeight = $(".nodeMenu li.active .m4Btn").outerHeight() || 0;
 
     $(".nodeMenu").attr("style", "");
     $(".nodeMenu ul").attr("style", "");
@@ -757,8 +710,6 @@ $(function () {
     }
   }
 });
-
-
 
 
 

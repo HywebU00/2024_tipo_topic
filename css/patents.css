@@ -10355,6 +10355,11 @@ body.noscroll {
           box-shadow: 0 6px 27px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
+@media screen and (max-width: 767px) {
+  .innerpage .center_block .advSearchContent .content {
+    padding: 16px 24px;
+  }
+}
 .innerpage .center_block .advSearchContent .content::before {
   content: "";
   width: 100%;
