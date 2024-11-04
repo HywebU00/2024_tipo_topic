@@ -646,9 +646,9 @@ $(document).ready(function()  {
 $(function () {
   $(".nodeMenu ul").find("li").has("ul").addClass("hasChild");
   $(".nodeMenu .hasChild ul").before(
-    '<button class="m4Btn">第四層開關</button>'
+    '<button class="m4Btn">第四層選單</button>'
   );
-  $(".nodeMenu").prepend('<button class="m3Btn">第三層開關</button>');
+  $(".nodeMenu").prepend('<button class="m3Btn">第三層選單</button>');
 
   $(".nodeMenu .hasChild > a").on("click", function (e) {
     e.preventDefault();
