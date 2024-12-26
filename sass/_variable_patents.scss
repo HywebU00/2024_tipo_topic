@@ -2,7 +2,7 @@
 // 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #b01fe8; //主色
+$primaryColor: #a61ddd; //主色
 $secondaryColor: #6c1bb8; //輔色
 $lightColor: #fec003; //點綴
 $linkColor: #6c1bb8; //連結
@@ -20,7 +20,7 @@ $color-hr: #666; //hr顏色
 $color-word: #292929; //一般字的顏色
 $btn-word: #292929; //按鈕字的顏色
 // 連結顏色
-$aColor: #b01fe8;
+$aColor: #a61ddd;
 $aHover: #6c1bb8;
 $aFocus: #ff0088;
 // 表單focus顏色
@@ -67,7 +67,7 @@ $footerColor: #d98eff; //footer字hover
 $sectionTitle: #6c1bb8; //section標題
 $mpSliderPage: #6c1bb8; //mpSlider頁碼底色
 
-$quickLink: #b01fe8; //快速連結
+$quickLink: #a61ddd; //快速連結
 $quickLinkHover: #6c1bb8; //快速連結hover
 
 $tabBtn: #d1d1d1; //頁籤
@@ -79,7 +79,7 @@ $timeColor: #4c1795; //news時間顏色
 $columnMore: $tabBtnActive; //兩欄more顏色
 
 $judgmentColor: #6c1bb8; //近期重要判決icon底色
-$judgmentColor2: #b01fe8; //近期重要判決文字hover
+$judgmentColor2: #a61ddd; //近期重要判決文字hover
 
 $resourceBg: url(../images/mp/patents/source_bg.jpg);
 $resourceMore: $fontColor;
@@ -105,3 +105,6 @@ $npbg2: url(../images/mp/patents/source_bg.jpg) center bottom;
 $npNodebg1: #5d0981;
 $npNodebg2: #9443b7;
 $npNodebg3: #e1e1e1;
+
+$anchorNavColor: #d98eff;
+$anchorNavHover: #9c57ba;
