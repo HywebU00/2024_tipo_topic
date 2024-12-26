@@ -741,9 +741,6 @@ anchors.forEach(anchor => {
           behavior: 'smooth'
         });
         targetElement.focus({ preventScroll: true });
-        targetElement.addEventListener('blur', () => {
-          targetElement.removeAttribute('tabindex'); // 滾動後移除
-        });
       }
     }
   });
