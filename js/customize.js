@@ -731,9 +731,9 @@ anchors.forEach(anchor => {
       if (targetElement) {
         // 計算錨點的位置，加上額外的 100px 偏移
         // const offsetPosition = targetElement.offsetTop;
-        const stickyHeight = 50; // 預設 sticky 的 top 值
-  const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-  const offsetPosition = elementPosition - 40 - stickyHeight;
+        const stickyHeight = 90; // 預設 sticky 的 top 值
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - 40 - stickyHeight;
 
         // 平滑滾動到計算好的位置
         window.scrollTo({

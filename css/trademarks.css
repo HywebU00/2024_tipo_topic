@@ -9841,6 +9841,7 @@ body.noscroll {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  overflow: initial;
 }
 @media screen and (max-width: 991px) {
   .innerpage > .container {
@@ -13038,7 +13039,7 @@ h2.title {
   margin-right: 2rem;
   border-radius: 8px;
   position: sticky;
-  top: 50px;
+  top: 90px;
 }
 @media screen and (max-width: 767px) {
   .anchorBlock .anchorNav {
