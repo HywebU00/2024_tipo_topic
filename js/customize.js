@@ -683,13 +683,10 @@ $(function () {
       'aria-expanded': 'false',
       role: 'button',
     });
-    // $('.nodeMenu li.hasChild > ul').attr('aria-hidden', 'true');
+
     $('.nodeMenu li.active > a').attr('aria-expanded', 'true');
     $('.nodeMenu li.active > ul').attr('aria-hidden', 'false');
 
-    // 確保子選單可以被Tab鍵聚焦
-    // $('.nodeMenu li.active > ul li a').attr('tabindex', '0');
-    // $('.nodeMenu li:not(.active) > ul li a').attr('tabindex', '-1');
   }
 
   $('.nodeMenu .hasChild > a').on('click', function (e) {
@@ -724,13 +721,6 @@ $(function () {
   $(window).on('resize load', function () {
     checkHeight();
   });
-
-  // $(".nodeMenu .m3Btn").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass("openBtn");
-  //   $(this).siblings("ul").children("li").children("a").toggleClass("open");
-  //   checkHeight();
-  // });
 
   $('.nodeMenu .m3Btn').on('click', function (e) {
     e.preventDefault();
