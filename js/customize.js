@@ -642,13 +642,60 @@ $(document).ready(function()  {
   $(window).resize(checkWindowWidth);
 });
 
+
+function checkHeight(e) {
+  const windowWidth = $(window).width();
+  let nextHeight = $(".nodeMenu li.active").children("ul").outerHeight();
+  let parentHeight = $(".nodeMenu li.active").parents("ul").outerHeight();
+  let m3BtnHeight = $(".nodeMenu .m3Btn").outerHeight();
+  let m4BtnHeight = $(".nodeMenu li.active .m4Btn").outerHeight();
+
+  $(".nodeMenu").attr("style", "");
+  $(".nodeMenu ul").attr("style", "");
+  if (windowWidth > 768) {
+    // 大螢幕設備處理
+    $(".nodeMenu a").removeClass("open");
+    $(".nodeMenu").css("height", `${parentHeight + nextHeight + 16}px`);
+    $(".nodeMenu li.active").children("ul").css("top", `${parentHeight + 16}px`);
+
+    // 新增無障礙相關屬性設定
+    $(".nodeMenu li.hasChild > a").attr("aria-expanded", "false");
+    $(".nodeMenu li.hasChild > ul").attr("aria-hidden", "true");
+    $(".nodeMenu li.active > a").attr("aria-expanded", "true");
+    $(".nodeMenu li.active > ul").attr("aria-hidden", "false");
+
+    // 確保子選單可以被Tab鍵聚焦
+    $(".nodeMenu li.active > ul li a").attr("tabindex", "0");
+    $(".nodeMenu li:not(.active) > ul li a").attr("tabindex", "-1");
+
+    // 為按鈕添加無障礙標籤
+    $(".nodeMenu .m4Btn").attr("aria-label", "展開或收起第四層選單");
+
+    console.log("parentHeight:", parentHeight, "nextHeight:", nextHeight);
+  } else {
+    $(".node3>li.hasChild>a").removeAttr("aria-expanded");
+    // 小螢幕設備處理
+    $(".nodeMenu").css(
+      "height",
+      `${parentHeight + nextHeight + m4BtnHeight + m3BtnHeight + 10}px`
+    );
+    $(".nodeMenu li.active")
+      .children("ul")
+      .css("top", `${parentHeight + m4BtnHeight + m3BtnHeight + 10}px`);
+    $(".nodeMenu li.active .m4Btn").css(
+      "top",
+      `${parentHeight + m3BtnHeight}px`
+    );
+  }
+}
+
 //nodeMemu
 $(function () {
   $(".nodeMenu ul").find("li").has("ul").addClass("hasChild");
   $(".nodeMenu .hasChild ul").before(
-    '<button class="m4Btn">第四層選單</button>'
+    '<button class="m4Btn aria-expanded="false">第四層選單</button>'
   );
-  $(".nodeMenu").prepend('<button class="m3Btn">第三層選單</button>');
+  $(".nodeMenu").prepend('<button class="m3Btn" aria-expanded="false">第三層選單</button>');
 
   $(".nodeMenu .hasChild > a").on("click", function (e) {
     e.preventDefault();
@@ -661,16 +708,30 @@ $(function () {
     checkHeight();
   });
 
+
   $(window).on("resize load", function () {
     checkHeight();
   });
 
+  // $(".nodeMenu .m3Btn").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(this).toggleClass("openBtn");
+  //   $(this).siblings("ul").children("li").children("a").toggleClass("open");
+  //   checkHeight();
+  // });
   $(".nodeMenu .m3Btn").on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass("openBtn");
-    $(this).siblings("ul").children("li").children("a").toggleClass("open");
+
+    let isExpanded = $(this).hasClass("openBtn"); // 檢查目前是否已展開
+    $(this).toggleClass("openBtn")
+           .attr("aria-expanded", !isExpanded); // 切換 aria-expanded
+
+    $(this).siblings("ul")
+           .attr("aria-hidden", isExpanded ? "true" : "false") // 切換 aria-hidden
+           .children("li").children("a").toggleClass("open");
+
     checkHeight();
-  });
+});
 
   $(".nodeMenu .m4Btn").on("click", function (e) {
     e.preventDefault();
@@ -682,34 +743,9 @@ $(function () {
   // 在初次加載時調用 checkHeight
   checkHeight();
 
-  function checkHeight(e) {
-    const windowWidth = $(window).width();
-    let nextHeight = $(".nodeMenu li.active").children("ul").outerHeight() || 0;
-    let parentHeight = $(".nodeMenu li.active").parents("ul").outerHeight() || 0;
-    let m3BtnHeight = $(".nodeMenu .m3Btn").outerHeight() || 0;
-    let m4BtnHeight = $(".nodeMenu li.active .m4Btn").outerHeight() || 0;
-
-    $(".nodeMenu").attr("style", "");
-    $(".nodeMenu ul").attr("style", "");
-    if (windowWidth > 768) {
-      $(".nodeMenu a").removeClass("open");
-      $(".nodeMenu").css("height", `${parentHeight + nextHeight + 16 }px`);
-      $(".nodeMenu li.active").children("ul").css("top", `${parentHeight + 16 }px`);
-    } else {
-      $(".nodeMenu").css(
-        "height",
-        `${parentHeight + nextHeight + m4BtnHeight + m3BtnHeight + 10 }px`
-      );
-      $(".nodeMenu li.active")
-        .children("ul")
-        .css("top", `${parentHeight + m4BtnHeight + m3BtnHeight + 10 }px`);
-      $(".nodeMenu li.active .m4Btn").css(
-        "top",
-        `${parentHeight + m3BtnHeight}px`
-      );
-    }
-  }
 });
+
+
 
 
 //錨點滾動

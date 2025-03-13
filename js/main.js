@@ -867,6 +867,7 @@ $(function () {
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'small', 356);
+      checkHeight();
     });
   $('.font_size')
     .find('.medium')
@@ -876,6 +877,7 @@ $(function () {
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'medium', 356);
+      checkHeight();
     });
   $('.font_size')
     .find('.large')
@@ -885,6 +887,7 @@ $(function () {
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'large', 356);
+      checkHeight();
     });
 
   function createCookie(name, value, days) {
