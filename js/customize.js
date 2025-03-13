@@ -398,55 +398,69 @@ tabFunction({
 $(document).ready(function () {
   const advSearchButton = $('.advSearch button');
   const advSearchContent = $('.advSearchContent');
-  const focusableElements = advSearchContent.find('input, select, button'); // 找到所有可 focus 的表單元素
+  const focusableElements = advSearchContent.find('input, select, button, textarea'); // 找到所有可 focus 的表單元素
 
   // 展開或收合內容的函數
-  function toggleContent() {
-    advSearchContent.slideToggle(); // 展開或收合 .advSearchContent
-    advSearchButton.toggleClass('active');
+  function toggleContent(expand) {
+    if (expand) {
+      advSearchContent.slideDown().attr('hidden', false);
+      advSearchButton
+        .addClass('active')
+        .attr('aria-expanded', 'true')
+        .text('關閉條件查詢'); // 切換按鈕文字
+      // focusableElements.first().focus();
+    } else {
+      advSearchContent.slideUp().attr('hidden', true);
+      advSearchButton
+        .removeClass('active')
+        .attr('aria-expanded', 'false')
+        .text('顯示條件查詢'); // 切換回原來的文字
+      advSearchButton.focus();
+    }
   }
 
-  // 滑鼠點擊事件：展開或收合內容
+
+  // 點擊按鈕展開或收合
   advSearchButton.on('click', function () {
-    toggleContent();
+    const isExpanded = $(this).attr('aria-expanded') === 'true';
+    toggleContent(!isExpanded);
   });
 
-  // 鍵盤事件：當按下 Enter 鍵時展開內容
+  // 鍵盤事件處理
   advSearchButton.on('keydown', function (e) {
-    if (e.key === 'Enter') {
-      e.preventDefault(); // 阻止默認的 Enter 行為
-      if (!advSearchContent.is(':visible')) {
-        toggleContent(); // 只在內容未展開時展開
-      }
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const isExpanded = $(this).attr('aria-expanded') === 'true';
+      toggleContent(!isExpanded);
+    } else if (e.key === 'Tab' && advSearchContent.is(':visible')) {
+      e.preventDefault();
+      focusableElements.first().focus();
     }
   });
 
-  // 鍵盤事件：按下 Tab 鍵時，焦點移到第一個可 focus 的元素
-  advSearchButton.on('keydown', function (e) {
-    if (e.key === 'Tab' && advSearchContent.is(':visible')) {
-      e.preventDefault(); // 阻止默認的 Tab 行為
-      focusableElements.first().focus(); // 焦點移到第一個可 focus 元素
+  // 在搜尋框內按 Esc 可關閉內容
+  advSearchContent.on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      toggleContent(false);
     }
   });
 
-  // 監聽最後一個 focusable 元素上的 Tab 鍵按下事件
-  focusableElements.last().on('keydown', function (e) {
-    if (e.key === 'Tab' && !e.shiftKey) {
-      e.preventDefault(); // 阻止默認的 Tab 行為
-      advSearchContent.slideUp(); // 收合內容
-      advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
-    }
-  });
-
-  // 監聽第一個 focusable 元素上的 Shift+Tab 鍵按下事件
+  // 監聽 Tab/Shift+Tab，確保焦點循環
   focusableElements.first().on('keydown', function (e) {
     if (e.key === 'Tab' && e.shiftKey) {
-      e.preventDefault(); // 阻止默認的 Shift+Tab 行為
-      advSearchContent.slideUp(); // 收合內容
-      advSearchButton.removeClass('active').focus(); // 焦點返回到按鈕
+      e.preventDefault();
+      toggleContent(false);
+    }
+  });
+
+  focusableElements.last().on('keydown', function (e) {
+    if (e.key === 'Tab' && !e.shiftKey) {
+      e.preventDefault();
+      toggleContent(false);
     }
   });
 });
+
 
 //accordion
 $(document).ready(function () {

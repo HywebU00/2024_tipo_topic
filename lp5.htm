@@ -270,8 +270,8 @@
               <div class="advSearch">
                 <button
                   type="button"
-                  name="顯示條件查詢/OPEN"
-                  aria-label="顯示條件查詢展開/收合"
+                  aria-expanded="false"
+                  aria-controls="advSearchContent"
                   class="btn"
                 >
                   顯示條件查詢
@@ -352,16 +352,16 @@
                 </ul>
               </div>
             </div>
-            <div class="advSearchContent">
+            <div id="advSearchContent" class="advSearchContent" hidden>
               <div class="content">
                 <form action="">
                   <div class="form_grid flex-form">
                     <div class="form_grp">
-                      <label for class="form_title">標題：</label>
+                      <label for="title" class="form_title">標題：</label>
                       <div class="form_content">
                         <input
-                          name=""
-                          id=""
+                          name="title"
+                          id="title"
                           type="text"
                           placeholder=""
                           title="請輸入文字"
@@ -370,30 +370,40 @@
                       </div>
                     </div>
                     <div class="form_grp">
-                      <label for class="form_title">內文：</label>
+                      <label for="content" class="form_title">內文：</label>
                       <div class="form_content">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea
+                          name="content"
+                          id="content"
+                          cols="30"
+                          rows="10"
+                          aria-label="內文"
+                        ></textarea>
                       </div>
                     </div>
                     <div class="form_grp form_inline">
-                      <label for class="form_title">張貼日期：</label>
+                      <label for="startDate" class="form_title"
+                        >張貼日期：</label
+                      >
                       <div class="form_content">
                         <div class="datepick">
                           <input
-                            name=""
+                            name="startDate"
+                            id="startDate"
                             type="date"
-                            value=""
                             class="calendar"
                             placeholder="開始日期"
+                            aria-label="開始日期"
                           />
                         </div>
                         <div class="datepick">
                           <input
-                            name=""
+                            name="endDate"
+                            id="endDate"
                             type="date"
-                            value=""
                             class="calendar"
                             placeholder="結束日期"
+                            aria-label="結束日期"
                           />
                         </div>
                       </div>
@@ -401,13 +411,13 @@
 
                     <div class="btn_grp form_inline">
                       <input
-                        name=""
+                        name="reset"
                         type="reset"
                         value="重設"
                         class="btn-reset"
                       />
                       <input
-                        name=""
+                        name="submit"
                         type="submit"
                         value="查詢"
                         class="btn-submit"
