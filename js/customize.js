@@ -699,6 +699,10 @@ $(function () {
     $(this).parent('li').siblings().find('li').removeClass('active');
     $(this).parent('li').siblings().find('ul').removeClass('active');
 
+    $(this).parent('li').siblings().children('a').attr('aria-expanded', false);
+    $(this).parent('li').siblings().children('ul').attr('aria-hidden', true);
+    $(this).parent('li').siblings().children('button').attr('aria-expanded', false).removeClass('openBtn');
+
     let isExpanded = $(this).attr('aria-expanded') === 'false'; // 檢查目前是否已展開
     if (!isExpanded) {
       $(this).parent('li').removeClass('active');
