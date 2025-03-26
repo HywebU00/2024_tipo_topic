@@ -71,6 +71,14 @@ $(function () {
       .on('blur', function () {
         $('.sidebar a,.sidebar button').eq(0).focus();
       });
+    // 加上 ESC 鍵事件
+    $(document).on('keydown.sidebar', function (e) {
+      if (e.key === 'Escape') {
+        hideSidebar();
+        $('.sidebarCtrl').focus(); // 關閉後把焦點移回開啟鈕
+        $(document).off('keydown.sidebar'); // 清除綁定，避免重複
+      }
+    });
   }
 
   // -------------------------------------------- 縮合選單 function

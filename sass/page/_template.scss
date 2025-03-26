@@ -267,9 +267,11 @@ body {
 
         @include screen("mobile") {
           flex-direction: column;
-          background: linear-gradient(0deg,
-              rgb(230, 230, 230) 0%,
-              rgb(255, 255, 255) 100%);
+          background: linear-gradient(
+            0deg,
+            rgb(230, 230, 230) 0%,
+            rgb(255, 255, 255) 100%
+          );
           padding: 0 1rem;
           border-radius: 0 0 4px 4px;
         }
@@ -305,9 +307,11 @@ body {
         position: static;
 
         @include screen("mobile") {
-          background: linear-gradient(0deg,
-              rgb(230, 230, 230) 0%,
-              rgb(255, 255, 255) 100%);
+          background: linear-gradient(
+            0deg,
+            rgb(230, 230, 230) 0%,
+            rgb(255, 255, 255) 100%
+          );
           padding: 0;
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
         }
@@ -317,7 +321,8 @@ body {
         }
 
         & > li {
-          @include screen("mobile") {}
+          @include screen("mobile") {
+          }
 
           & > a {
             font-size: 1.25em;
@@ -423,9 +428,11 @@ body {
               column-gap: 10px;
 
               @include screen("mobile") {
-                background: linear-gradient(0deg,
-                    rgb(230, 230, 230) 0%,
-                    rgb(255, 255, 255) 100%);
+                background: linear-gradient(
+                  0deg,
+                  rgb(230, 230, 230) 0%,
+                  rgb(255, 255, 255) 100%
+                );
                 padding: 0;
                 display: block;
                 border-radius: 0 0 4px 4px;
@@ -519,7 +526,7 @@ body {
       border-top: solid 4px #ccc;
       padding: 1em 1.5em;
       box-sizing: border-box;
-
+      clear: both;
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -558,9 +565,11 @@ body {
         margin-top: 8px;
         margin-bottom: 30px;
         position: relative;
-        background: linear-gradient(180deg,
-            rgb(230, 230, 230) 0%,
-            rgb(255, 255, 255) 100%);
+        background: linear-gradient(
+          180deg,
+          rgb(230, 230, 230) 0%,
+          rgb(255, 255, 255) 100%
+        );
         box-shadow: 0 6px 27px 0 rgba(0, 0, 0, 0.2);
         border-radius: 0 0 4px 4px;
 
@@ -654,7 +663,6 @@ $fileType: doc, docx, odt, odf, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt,
 }
 
 span {
-
   &.file_doc,
   &.file_docx,
   &.file_odt,
