@@ -96,6 +96,7 @@ $(function () {
     // } else {
     //   $('.sidebarCtrl').not('.tabletUse').focus();
     // }
+    $(document).off('keydown.sidebar');
   }
   // -------------------------------------------- 打開選單動作
   $('.sidebarCtrl.tabletUse').on('click', function (e) {
