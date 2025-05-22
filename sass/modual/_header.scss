@@ -271,14 +271,20 @@
       width: auto;
       &[type="text"] {
         flex-grow: 1;
+        &:focus-visible {
+          box-shadow: 0 0px 0px 2px $aFocus;
+        }
       }
       &[type="submit"] {
         min-width: auto;
         padding: 0.2em 0.8em;
-      }
-      &:focus-visible {
-        color: #fff;
-        box-shadow: 0 0px 0px 2px $aFocus;
+        &:focus {
+          color: #fff;
+        }
+        &:focus-visible {
+          color: #fff;
+          box-shadow: 0 0px 0px 2px $aFocus;
+        }
       }
     }
     .btn_grp {

@@ -3736,11 +3736,18 @@ div.tag ul li a.active:hover {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.search .form_grp input[type=text]:focus-visible {
+  -webkit-box-shadow: 0 0px 0px 2px #ff0088;
+          box-shadow: 0 0px 0px 2px #ff0088;
+}
 .search .form_grp input[type=submit] {
   min-width: auto;
   padding: 0.2em 0.8em;
 }
-.search .form_grp input:focus-visible {
+.search .form_grp input[type=submit]:focus {
+  color: #fff;
+}
+.search .form_grp input[type=submit]:focus-visible {
   color: #fff;
   -webkit-box-shadow: 0 0px 0px 2px #ff0088;
           box-shadow: 0 0px 0px 2px #ff0088;
