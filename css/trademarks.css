@@ -10761,6 +10761,10 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   margin: 30px 0;
 }
 
+.ipcAnchor {
+  scroll-margin-top: 100px;
+}
+
 .sidebar button.sidebarClose:focus-visible {
   outline: 2px solid #01d0db;
 }
