@@ -362,7 +362,7 @@ $(function () {
 // tab功能
 tabFunction({
   target: '.tabSet',
-  openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
+  openFirst: true, // 預設先展開所有內容，鍵盤的自動開合功能無效
   openSwitch: true, // 是否可開合/切換
   autoClose: true, // 自動關閉其他開啟內容
   modeSwitch: true, // 預設模式自動切換，尺寸以上tab功能，尺寸以下手風琴功能
