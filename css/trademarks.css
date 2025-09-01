@@ -11040,6 +11040,7 @@ h2.sectionTitle::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #0b4d95;
+  display: none;
 }
 @media screen and (max-width: 991px) {
   .kvSlider .kvOuter .mpSlider .sliderCounter {
@@ -13505,8 +13506,12 @@ h2.title {
   .fatfooter,
   footer,
   .accesskey,
-  .submenu {
-    display: none;
+  .submenu,
+  .innerBanner,
+  .innerBanner .bannerTitle,
+  .innerBanner .banner,
+  .center_block .nodeMenu {
+    display: none !important;
   }
   /* -------------------------------各別顯示設定----//*/
   body {
@@ -13618,7 +13623,7 @@ h2.title {
   }
   .main table,
   .content table {
-    background: #FFF;
+    background: #fff;
   }
   .main li,
   .content li {
@@ -13667,7 +13672,7 @@ h2.title {
     width: 30%;
     height: 4cm;
     display: inline-block;
-    background: #DEDEDE;
+    background: #dedede;
     position: relative;
   }
   .lightbox_slider .cp_slider .slick-slide:before {

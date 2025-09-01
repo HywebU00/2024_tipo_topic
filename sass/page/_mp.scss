@@ -250,6 +250,7 @@ h2.sectionTitle {
         padding: 10px;
         box-sizing: border-box;
         background: $mpSliderPage;
+        display: none;
         @include screen("tablet") {
           display: none;
         }
